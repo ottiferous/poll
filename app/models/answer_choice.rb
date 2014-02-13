@@ -9,7 +9,11 @@
 #  updated_at  :datetime
 #
 
+
 class AnswerChoice < ActiveRecord::Base
+
+  validates :question_id, presence: true
+  validates :text, presence: true
 
   belongs_to  :question,
               :class_name => 'Question',
@@ -18,7 +22,7 @@ class AnswerChoice < ActiveRecord::Base
 
   has_many    :responses,
               :class_name => 'Response',
-              :foreign_key => :response_id,
+              :foreign_key => :answer_choice_id,
               :primary_key => :id
 
 end
