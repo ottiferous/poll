@@ -1,0 +1,101 @@
+  [1m[36m (3.3ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [1m[35m (2.9ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateUsers (20140213181422)
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateUsers (20140213181422)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (5.5ms)[0m  [1mCREATE TABLE "users" ("id" serial primary key, "user_name" character varying(255) NOT NULL, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35m (1.6ms)[0m  CREATE INDEX "index_users_on_user_name" ON "users" ("user_name")
+  [1m[36mSQL (13.7ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20140213181422"]]
+  [1m[35m (6.0ms)[0m  COMMIT
+Migrating to CreatePolls (20140213181432)
+  [1m[36m (0.5ms)[0m  [1mBEGIN[0m
+  [1m[35m (4.3ms)[0m  CREATE TABLE "polls" ("id" serial primary key, "title" character varying(255) NOT NULL, "author" integer NOT NULL, "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36m (1.0ms)[0m  [1mCREATE INDEX "index_polls_on_author" ON "polls" ("author")[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20140213181432"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+Migrating to CreateQuestions (20140213181438)
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (6.5ms)[0m  [1mCREATE TABLE "questions" ("id" serial primary key, "poll_id" integer, "text" text, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35m (1.5ms)[0m  CREATE INDEX "index_questions_on_poll" ON "questions" ("poll")
+PG::UndefinedColumn: ERROR:  column "poll" does not exist
+: CREATE  INDEX  "index_questions_on_poll" ON "questions"  ("poll")
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateQuestions (20140213181438)
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (24.0ms)[0m  [1mCREATE TABLE "questions" ("id" serial primary key, "poll_id" integer, "text" text, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35m (2.2ms)[0m  CREATE INDEX "index_questions_on_poll" ON "questions" ("poll")
+PG::UndefinedColumn: ERROR:  column "poll" does not exist
+: CREATE  INDEX  "index_questions_on_poll" ON "questions"  ("poll")
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateQuestions (20140213181438)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (20.0ms)[0m  [1mCREATE TABLE "questions" ("id" serial primary key, "poll_id" integer, "text" text, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35m (1.4ms)[0m  CREATE INDEX "index_questions_on_poll_id" ON "questions" ("poll_id")
+  [1m[36mSQL (1.4ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20140213181438"]]
+  [1m[35m (0.8ms)[0m  COMMIT
+Migrating to CreateAnswerChoices (20140213181455)
+  [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+  [1m[35m (4.5ms)[0m  CREATE TABLE "answer_choices" ("id" serial primary key, "question_id" integer, "text" character varying(255), "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36m (2.1ms)[0m  [1mCREATE INDEX "index_answer_choices_on_question" ON "answer_choices" ("question")[0m
+PG::UndefinedColumn: ERROR:  column "question" does not exist
+: CREATE  INDEX  "index_answer_choices_on_question" ON "answer_choices"  ("question")
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateAnswerChoices (20140213181455)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (6.0ms)[0m  [1mCREATE TABLE "answer_choices" ("id" serial primary key, "question_id" integer, "text" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35m (1.6ms)[0m  CREATE INDEX "index_answer_choices_on_question" ON "answer_choices" ("question")
+PG::UndefinedColumn: ERROR:  column "question" does not exist
+: CREATE  INDEX  "index_answer_choices_on_question" ON "answer_choices"  ("question")
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateAnswerChoices (20140213181455)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (5.2ms)[0m  [1mCREATE TABLE "answer_choices" ("id" serial primary key, "question_id" integer, "text" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35m (1.1ms)[0m  CREATE INDEX "index_answer_choices_on_question_id" ON "answer_choices" ("question_id")
+  [1m[36mSQL (1.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20140213181455"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+Migrating to CreateResponses (20140213181504)
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (3.7ms)[0m  CREATE TABLE "responses" ("id" serial primary key, "user_id" integer, "answer_choice_id" integer, "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36m (1.9ms)[0m  [1mCREATE INDEX "index_responses_on_user" ON "responses" ("user")[0m
+PG::UndefinedColumn: ERROR:  column "user" does not exist
+: CREATE  INDEX  "index_responses_on_user" ON "responses"  ("user")
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateResponses (20140213181504)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (5.9ms)[0m  [1mCREATE TABLE "responses" ("id" serial primary key, "user_id" integer, "answer_choice_id" integer, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35m (9.9ms)[0m  CREATE INDEX "index_responses_on_user_id" ON "responses" ("user_id")
+  [1m[36m (1.3ms)[0m  [1mCREATE INDEX "index_responses_on_answer_choice_id" ON "responses" ("answer_choice_id")[0m
+  [1m[35mSQL (1.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20140213181504"]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.4ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (177.0ms)[0m  [1mDROP DATABASE IF EXISTS "polls_dev"[0m
+  [1m[35m (274.3ms)[0m  CREATE DATABASE "polls_dev" ENCODING = 'utf8'
+  [1m[36mSQL (1.9ms)[0m  [1mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (6.8ms)[0m  CREATE TABLE "answer_choices" ("id" serial primary key, "question_id" integer, "text" character varying(255), "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36m (1.6ms)[0m  [1mCREATE INDEX "index_answer_choices_on_question_id" ON "answer_choices" USING btree ("question_id")[0m
+  [1m[35m (3.5ms)[0m  CREATE TABLE "polls" ("id" serial primary key, "title" character varying(255) NOT NULL, "author" integer NOT NULL, "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36m (1.3ms)[0m  [1mCREATE INDEX "index_polls_on_author" ON "polls" USING btree ("author")[0m
+  [1m[35m (5.1ms)[0m  CREATE TABLE "questions" ("id" serial primary key, "poll_id" integer, "text" text, "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36m (1.5ms)[0m  [1mCREATE INDEX "index_questions_on_poll_id" ON "questions" USING btree ("poll_id")[0m
+  [1m[35m (3.2ms)[0m  CREATE TABLE "responses" ("id" serial primary key, "user_id" integer, "answer_choice_id" integer, "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36m (1.4ms)[0m  [1mCREATE INDEX "index_responses_on_answer_choice_id" ON "responses" USING btree ("answer_choice_id")[0m
+  [1m[35m (1.3ms)[0m  CREATE INDEX "index_responses_on_user_id" ON "responses" USING btree ("user_id")
+  [1m[36m (4.0ms)[0m  [1mCREATE TABLE "users" ("id" serial primary key, "user_name" character varying(255) NOT NULL, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35m (1.7ms)[0m  CREATE INDEX "index_users_on_user_name" ON "users" USING btree ("user_name")
+  [1m[36m (1.8ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [1m[35m (1.7ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.6ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (0.6ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140213181504')
+  [1m[36m (0.5ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20140213181422')[0m
+  [1m[35m (0.4ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140213181432')
+  [1m[36m (0.4ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20140213181438')[0m
+  [1m[35m (0.4ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140213181455')
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
