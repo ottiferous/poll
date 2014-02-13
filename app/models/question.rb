@@ -22,4 +22,12 @@ class Question < ActiveRecord::Base
               :primary_key => :id
 
 
+  has_many :my_responses, :through => :answer_choices, :source => :responses
+
+
+  def results
+    self.my_responses.group(:answer_choices).count(:responses)
+
+  end
+
 end

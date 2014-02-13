@@ -1086,3 +1086,1277 @@ LINE 7:       AND
 
   [1m[36mSQL (12.7ms)[0m  [1mINSERT INTO "responses" ("answer_choice_id", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["answer_choice_id", 7], ["created_at", Thu, 13 Feb 2014 20:11:37 UTC +00:00], ["updated_at", Thu, 13 Feb 2014 20:11:37 UTC +00:00], ["user_id", 3]]
   [1m[35m (5.8ms)[0m  COMMIT
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mResponse Load (1.2ms)[0m   SELECT responses.*
+ FROM responses
+ JOIN answer_choices
+ ON responses.answer_choice_id = answer_choices.id
+ WHERE
+ responses.user_id = 3
+ AND
+ answer_choices.question_id = (SELECT answer_choices.question_id
+ FROM
+ answer_choices
+ WHERE
+ answer_choices.id = 7)
+
+
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "responses" ("answer_choice_id", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["answer_choice_id", 7], ["created_at", Thu, 13 Feb 2014 21:23:23 UTC +00:00], ["updated_at", Thu, 13 Feb 2014 21:23:23 UTC +00:00], ["user_id", 3]]
+  [1m[35m (0.6ms)[0m  COMMIT
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mResponse Load (1.1ms)[0m   SELECT responses.*
+ FROM responses
+ JOIN answer_choices
+ ON responses.answer_choice_id = answer_choices.id
+ WHERE
+ responses.user_id = 3
+ AND
+ answer_choices.question_id = (SELECT answer_choices.question_id
+ FROM
+ answer_choices
+ WHERE
+ answer_choices.id = 6)
+
+
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "responses" ("answer_choice_id", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["answer_choice_id", 6], ["created_at", Thu, 13 Feb 2014 21:23:40 UTC +00:00], ["updated_at", Thu, 13 Feb 2014 21:23:40 UTC +00:00], ["user_id", 3]]
+  [1m[35m (0.6ms)[0m  COMMIT
+  [1m[36mResponse Load (0.7ms)[0m  [1mSELECT "responses".* FROM "responses"[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mResponse Load (1.1ms)[0m  [1m SELECT responses.*
+ FROM responses
+ JOIN answer_choices
+ ON responses.answer_choice_id = answer_choices.id
+ WHERE
+ responses.user_id = 3
+ AND
+ answer_choices.question_id = (SELECT answer_choices.question_id
+ FROM
+ answer_choices
+ WHERE
+ answer_choices.id = 7)
+
+[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "responses" ("answer_choice_id", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4) RETURNING "id"  [["answer_choice_id", 7], ["created_at", Thu, 13 Feb 2014 21:25:22 UTC +00:00], ["updated_at", Thu, 13 Feb 2014 21:25:22 UTC +00:00], ["user_id", 3]]
+  [1m[36m (1.1ms)[0m  [1mCOMMIT[0m
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mResponse Load (2.3ms)[0m   SELECT responses.*
+ FROM responses
+ JOIN answer_choices
+ ON responses.answer_choice_id = answer_choices.id
+ WHERE
+ responses.user_id = 3
+ AND
+ answer_choices.question_id = (SELECT answer_choices.question_id
+ FROM
+ answer_choices
+ WHERE
+ answer_choices.id = 7)
+
+
+  [1m[36mSQL (28.5ms)[0m  [1mINSERT INTO "responses" ("answer_choice_id", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["answer_choice_id", 7], ["created_at", Thu, 13 Feb 2014 21:25:51 UTC +00:00], ["updated_at", Thu, 13 Feb 2014 21:25:51 UTC +00:00], ["user_id", 3]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mResponse Load (1.2ms)[0m   SELECT responses.*
+ FROM responses
+ JOIN answer_choices
+ ON responses.answer_choice_id = answer_choices.id
+ WHERE
+ responses.user_id = 1
+ AND
+ answer_choices.question_id = (SELECT answer_choices.question_id
+ FROM
+ answer_choices
+ WHERE
+ answer_choices.id = 7)
+
+
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mResponse Load (2.2ms)[0m   SELECT responses.*
+ FROM responses
+ JOIN answer_choices
+ ON responses.answer_choice_id = answer_choices.id
+ WHERE
+ responses.user_id = 1
+ AND
+ answer_choices.question_id = (SELECT answer_choices.question_id
+ FROM
+ answer_choices
+ WHERE
+ answer_choices.id = 7)
+
+
+  [1m[36mSQL (2.6ms)[0m  [1mINSERT INTO "responses" ("answer_choice_id", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["answer_choice_id", 7], ["created_at", Thu, 13 Feb 2014 21:27:27 UTC +00:00], ["updated_at", Thu, 13 Feb 2014 21:27:27 UTC +00:00], ["user_id", 1]]
+  [1m[35m (0.7ms)[0m  COMMIT
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mResponse Load (1.2ms)[0m   SELECT responses.*
+ FROM responses
+ JOIN answer_choices
+ ON responses.answer_choice_id = answer_choices.id
+ WHERE
+ responses.user_id = 1
+ AND
+ answer_choices.question_id = (SELECT answer_choices.question_id
+ FROM
+ answer_choices
+ WHERE
+ answer_choices.id = 7)
+
+
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mResponse Load (1.3ms)[0m  [1m SELECT responses.*
+ FROM responses
+ JOIN answer_choices
+ ON responses.answer_choice_id = answer_choices.id
+ WHERE
+ responses.user_id = 1
+ AND
+ answer_choices.question_id = (SELECT answer_choices.question_id
+ FROM
+ answer_choices
+ WHERE
+ answer_choices.id = 8)
+
+[0m
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36mUser Load (1.6ms)[0m  [1mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mUser Load (0.9ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.7ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mPoll Load (1.0ms)[0m  [1mSELECT "polls".* FROM "polls" WHERE "polls"."author_id" = $1[0m  [["author_id", 1]]
+  [1m[35mUser Load (0.7ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.9ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.7ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mPoll Load (0.5ms)[0m  [1mSELECT "polls".* FROM "polls" WHERE "polls"."author_id" = $1[0m  [["author_id", 1]]
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mPoll Load (0.8ms)[0m  [1mSELECT "polls".* FROM "polls" WHERE "polls"."author_id" = $1[0m  [["author_id", 1]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mPoll Load (0.7ms)[0m  [1mSELECT "polls".* FROM "polls" WHERE "polls"."author_id" = $1[0m  [["author_id", 1]]
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mPoll Load (0.6ms)[0m  [1mSELECT "polls".* FROM "polls" WHERE "polls"."author_id" = $1[0m  [["author_id", 1]]
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mPoll Load (1.0ms)[0m  [1mSELECT "polls".* FROM "polls" WHERE "polls"."author_id" = $1 ORDER BY "polls"."id" ASC LIMIT 1[0m  [["author_id", 1]]
+  [1m[35mAnswerChoice Load (7.2ms)[0m  SELECT "answer_choices".* FROM "answer_choices" INNER JOIN "questions" ON "answer_choices"."question_id" = "questions"."id" WHERE "questions"."poll_id" = $1  [["poll_id", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mPoll Load (0.7ms)[0m  SELECT "polls".* FROM "polls" WHERE "polls"."author_id" = $1 ORDER BY "polls"."id" ASC LIMIT 1  [["author_id", 1]]
+  [1m[36mAnswerChoice Load (1.3ms)[0m  [1mSELECT "answer_choices".* FROM "answer_choices" INNER JOIN "questions" ON "answer_choices"."question_id" = "questions"."id" WHERE "questions"."poll_id" = $1 AND (answer_choices.id = 1)[0m  [["poll_id", 1]]
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mPoll Load (0.6ms)[0m  [1mSELECT "polls".* FROM "polls" WHERE "polls"."author_id" = $1[0m  [["author_id", 1]]
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mPoll Load (0.4ms)[0m  [1mSELECT "polls".* FROM "polls" WHERE "polls"."author_id" = $1[0m  [["author_id", 1]]
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mPoll Load (0.4ms)[0m  [1mSELECT "polls".* FROM "polls" WHERE "polls"."author_id" = $1[0m  [["author_id", 1]]
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mPoll Load (0.4ms)[0m  [1mSELECT "polls".* FROM "polls" WHERE "polls"."author_id" = $1[0m  [["author_id", 1]]
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mPoll Load (0.5ms)[0m  [1mSELECT "polls".* FROM "polls" WHERE "polls"."author_id" = $1[0m  [["author_id", 1]]
+  [1m[35mUser Load (1.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.6ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mPoll Load (2.0ms)[0m  SELECT "polls".* FROM "polls" INNER JOIN "questions" ON "questions"."poll_id" = "polls"."id" INNER JOIN "questions" "questions_polls_join" ON "questions_polls_join"."poll_id" = "polls"."id" INNER JOIN "answer_choices" ON "answer_choices"."question_id" = "questions_polls_join"."id" WHERE "polls"."author_id" = $1 AND (answer_choices.id = 1)  [["author_id", 1]]
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mPoll Load (1.9ms)[0m  SELECT "polls".* FROM "polls" INNER JOIN "questions" ON "questions"."poll_id" = "polls"."id" INNER JOIN "answer_choices" ON "answer_choices"."question_id" = "questions"."id" WHERE "polls"."author_id" = $1 AND (answer_choices.id = 1)  [["author_id", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mPoll Load (1.3ms)[0m  SELECT "polls".* FROM "polls" INNER JOIN "questions" ON "questions"."poll_id" = "polls"."id" INNER JOIN "answer_choices" ON "answer_choices"."question_id" = "questions"."id" WHERE "polls"."author_id" = $1 AND (answer_choices.id = 1)  [["author_id", 1]]
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mQuestion Load (0.4ms)[0m  SELECT "questions".* FROM "questions" ORDER BY "questions"."id" ASC LIMIT 1
+  [1m[36mAnswerChoice Load (0.7ms)[0m  [1mSELECT "answer_choices".* FROM "answer_choices" WHERE "answer_choices"."question_id" = $1[0m  [["question_id", 1]]
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mResponse Load (0.9ms)[0m  [1m SELECT responses.*
+ FROM responses
+ JOIN answer_choices
+ ON responses.answer_choice_id = answer_choices.id
+ WHERE
+ responses.user_id = 1
+ AND
+ answer_choices.question_id = (SELECT answer_choices.question_id
+ FROM
+ answer_choices
+ WHERE
+ answer_choices.id = 1)
+
+[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (1.5ms)[0m  [1mSELECT COUNT(*) FROM "polls" INNER JOIN "questions" ON "questions"."poll_id" = "polls"."id" INNER JOIN "answer_choices" ON "answer_choices"."question_id" = "questions"."id" WHERE "polls"."author_id" = $1 AND (answer_choices.id = 1)[0m  [["author_id", 1]]
+  [1m[35m (0.4ms)[0m  ROLLBACK
+  [1m[36m (214.4ms)[0m  [1mDROP DATABASE IF EXISTS "polls_dev"[0m
+  [1m[35m (668.6ms)[0m  CREATE DATABASE "polls_dev" ENCODING = 'utf8'
+  [1m[36mSQL (1.8ms)[0m  [1mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (7.9ms)[0m  CREATE TABLE "answer_choices" ("id" serial primary key, "question_id" integer, "text" character varying(255), "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36m (2.2ms)[0m  [1mCREATE INDEX "index_answer_choices_on_question_id" ON "answer_choices" USING btree ("question_id")[0m
+  [1m[35m (4.7ms)[0m  CREATE TABLE "polls" ("id" serial primary key, "title" character varying(255) NOT NULL, "author_id" integer NOT NULL, "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36m (1.8ms)[0m  [1mCREATE INDEX "index_polls_on_author_id" ON "polls" USING btree ("author_id")[0m
+  [1m[35m (5.6ms)[0m  CREATE TABLE "questions" ("id" serial primary key, "poll_id" integer, "text" text, "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36m (1.4ms)[0m  [1mCREATE INDEX "index_questions_on_poll_id" ON "questions" USING btree ("poll_id")[0m
+  [1m[35m (5.2ms)[0m  CREATE TABLE "responses" ("id" serial primary key, "user_id" integer, "answer_choice_id" integer, "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36m (2.5ms)[0m  [1mCREATE INDEX "index_responses_on_answer_choice_id" ON "responses" USING btree ("answer_choice_id")[0m
+  [1m[35m (1.5ms)[0m  CREATE INDEX "index_responses_on_user_id" ON "responses" USING btree ("user_id")
+  [1m[36m (5.2ms)[0m  [1mCREATE TABLE "users" ("id" serial primary key, "user_name" character varying(255) NOT NULL, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35m (2.2ms)[0m  CREATE INDEX "index_users_on_user_name" ON "users" USING btree ("user_name")
+  [1m[36m (1.4ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [1m[35m (1.8ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.8ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (1.1ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140213181504')
+  [1m[36m (0.8ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20140213181422')[0m
+  [1m[35m (0.5ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140213181432')
+  [1m[36m (0.5ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20140213181438')[0m
+  [1m[35m (0.4ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140213181455')
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36mUser Exists (1.4ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."user_name" = 'kevin' LIMIT 1[0m
+  [1m[35mSQL (16.5ms)[0m  INSERT INTO "users" ("created_at", "updated_at", "user_name") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", Thu, 13 Feb 2014 22:02:29 UTC +00:00], ["updated_at", Thu, 13 Feb 2014 22:02:29 UTC +00:00], ["user_name", "kevin"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mUser Exists (0.6ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."user_name" = 'andrew' LIMIT 1[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "users" ("created_at", "updated_at", "user_name") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", Thu, 13 Feb 2014 22:02:29 UTC +00:00], ["updated_at", Thu, 13 Feb 2014 22:02:29 UTC +00:00], ["user_name", "andrew"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mUser Exists (0.5ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."user_name" = 'max' LIMIT 1[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "users" ("created_at", "updated_at", "user_name") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", Thu, 13 Feb 2014 22:02:29 UTC +00:00], ["updated_at", Thu, 13 Feb 2014 22:02:29 UTC +00:00], ["user_name", "max"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (1.6ms)[0m  [1mINSERT INTO "polls" ("author_id", "created_at", "title", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["author_id", 1], ["created_at", Thu, 13 Feb 2014 22:02:29 UTC +00:00], ["title", "A great new! poll!"], ["updated_at", Thu, 13 Feb 2014 22:02:29 UTC +00:00]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "polls" ("author_id", "created_at", "title", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["author_id", 2], ["created_at", Thu, 13 Feb 2014 22:02:29 UTC +00:00], ["title", "An even better poll thant that other one!"], ["updated_at", Thu, 13 Feb 2014 22:02:29 UTC +00:00]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (1.5ms)[0m  [1mINSERT INTO "questions" ("created_at", "poll_id", "text", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", Thu, 13 Feb 2014 22:02:29 UTC +00:00], ["poll_id", 1], ["text", "When do you wake up in the morning?"], ["updated_at", Thu, 13 Feb 2014 22:02:29 UTC +00:00]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "questions" ("created_at", "poll_id", "text", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", Thu, 13 Feb 2014 22:02:29 UTC +00:00], ["poll_id", 1], ["text", "How do you take your coffee?"], ["updated_at", Thu, 13 Feb 2014 22:02:29 UTC +00:00]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "questions" ("created_at", "poll_id", "text", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", Thu, 13 Feb 2014 22:02:29 UTC +00:00], ["poll_id", 2], ["text", "How do you get to work?"], ["updated_at", Thu, 13 Feb 2014 22:02:29 UTC +00:00]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "questions" ("created_at", "poll_id", "text", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", Thu, 13 Feb 2014 22:02:29 UTC +00:00], ["poll_id", 2], ["text", "Are you ever going to let me down?"], ["updated_at", Thu, 13 Feb 2014 22:02:29 UTC +00:00]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "questions" ("created_at", "poll_id", "text", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", Thu, 13 Feb 2014 22:02:29 UTC +00:00], ["poll_id", 2], ["text", "Are you ever going to hurt me?"], ["updated_at", Thu, 13 Feb 2014 22:02:29 UTC +00:00]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.5ms)[0m  INSERT INTO "answer_choices" ("created_at", "question_id", "text", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", Thu, 13 Feb 2014 22:02:29 UTC +00:00], ["question_id", 1], ["text", "6 A.M"], ["updated_at", Thu, 13 Feb 2014 22:02:29 UTC +00:00]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "answer_choices" ("created_at", "question_id", "text", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", Thu, 13 Feb 2014 22:02:29 UTC +00:00], ["question_id", 1], ["text", "7 A.M"], ["updated_at", Thu, 13 Feb 2014 22:02:29 UTC +00:00]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "answer_choices" ("created_at", "question_id", "text", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", Thu, 13 Feb 2014 22:02:29 UTC +00:00], ["question_id", 1], ["text", "8 A.M"], ["updated_at", Thu, 13 Feb 2014 22:02:29 UTC +00:00]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "answer_choices" ("created_at", "question_id", "text", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", Thu, 13 Feb 2014 22:02:29 UTC +00:00], ["question_id", 2], ["text", "Black"], ["updated_at", Thu, 13 Feb 2014 22:02:29 UTC +00:00]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "answer_choices" ("created_at", "question_id", "text", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", Thu, 13 Feb 2014 22:02:29 UTC +00:00], ["question_id", 2], ["text", "with cream"], ["updated_at", Thu, 13 Feb 2014 22:02:29 UTC +00:00]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "answer_choices" ("created_at", "question_id", "text", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", Thu, 13 Feb 2014 22:02:29 UTC +00:00], ["question_id", 2], ["text", "with cream and sugar"], ["updated_at", Thu, 13 Feb 2014 22:02:29 UTC +00:00]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "answer_choices" ("created_at", "question_id", "text", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", Thu, 13 Feb 2014 22:02:29 UTC +00:00], ["question_id", 3], ["text", "I walk"], ["updated_at", Thu, 13 Feb 2014 22:02:29 UTC +00:00]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "answer_choices" ("created_at", "question_id", "text", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", Thu, 13 Feb 2014 22:02:29 UTC +00:00], ["question_id", 3], ["text", "I take the bus"], ["updated_at", Thu, 13 Feb 2014 22:02:29 UTC +00:00]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "answer_choices" ("created_at", "question_id", "text", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", Thu, 13 Feb 2014 22:02:29 UTC +00:00], ["question_id", 3], ["text", "I endure the bart"], ["updated_at", Thu, 13 Feb 2014 22:02:29 UTC +00:00]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mResponse Load (1.3ms)[0m  [1m SELECT responses.*
+ FROM responses
+ JOIN answer_choices
+ ON responses.answer_choice_id = answer_choices.id
+ WHERE
+ responses.user_id = 1
+ AND
+ answer_choices.question_id = (SELECT answer_choices.question_id
+ FROM
+ answer_choices
+ WHERE
+ answer_choices.id = 2)
+
+[0m
+  [1m[35mUser Load (0.7ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (1.8ms)[0m  [1mSELECT COUNT(*) FROM "polls" INNER JOIN "questions" ON "questions"."poll_id" = "polls"."id" INNER JOIN "answer_choices" ON "answer_choices"."question_id" = "questions"."id" WHERE "polls"."author_id" = $1 AND (answer_choices.id = 2)[0m  [["author_id", 1]]
+  [1m[35m (0.4ms)[0m  ROLLBACK
+  [1m[36m (112.7ms)[0m  [1mDROP DATABASE IF EXISTS "polls_dev"[0m
+  [1m[35m (269.0ms)[0m  CREATE DATABASE "polls_dev" ENCODING = 'utf8'
+  [1m[36mSQL (1.9ms)[0m  [1mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (6.8ms)[0m  CREATE TABLE "answer_choices" ("id" serial primary key, "question_id" integer, "text" character varying(255), "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36m (1.8ms)[0m  [1mCREATE INDEX "index_answer_choices_on_question_id" ON "answer_choices" USING btree ("question_id")[0m
+  [1m[35m (3.6ms)[0m  CREATE TABLE "polls" ("id" serial primary key, "title" character varying(255) NOT NULL, "author_id" integer NOT NULL, "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36m (1.4ms)[0m  [1mCREATE INDEX "index_polls_on_author_id" ON "polls" USING btree ("author_id")[0m
+  [1m[35m (7.0ms)[0m  CREATE TABLE "questions" ("id" serial primary key, "poll_id" integer, "text" text, "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36m (2.3ms)[0m  [1mCREATE INDEX "index_questions_on_poll_id" ON "questions" USING btree ("poll_id")[0m
+  [1m[35m (4.3ms)[0m  CREATE TABLE "responses" ("id" serial primary key, "user_id" integer, "answer_choice_id" integer, "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36m (1.3ms)[0m  [1mCREATE INDEX "index_responses_on_answer_choice_id" ON "responses" USING btree ("answer_choice_id")[0m
+  [1m[35m (1.4ms)[0m  CREATE INDEX "index_responses_on_user_id" ON "responses" USING btree ("user_id")
+  [1m[36m (5.1ms)[0m  [1mCREATE TABLE "users" ("id" serial primary key, "user_name" character varying(255) NOT NULL, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35m (1.6ms)[0m  CREATE INDEX "index_users_on_user_name" ON "users" USING btree ("user_name")
+  [1m[36m (1.5ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [1m[35m (1.8ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.5ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (0.7ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140213181504')
+  [1m[36m (0.6ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20140213181422')[0m
+  [1m[35m (0.4ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140213181432')
+  [1m[36m (0.4ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20140213181438')[0m
+  [1m[35m (0.4ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140213181455')
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mUser Exists (1.0ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."user_name" = 'kevin' LIMIT 1[0m
+  [1m[35mSQL (6.1ms)[0m  INSERT INTO "users" ("created_at", "updated_at", "user_name") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", Thu, 13 Feb 2014 22:03:39 UTC +00:00], ["updated_at", Thu, 13 Feb 2014 22:03:39 UTC +00:00], ["user_name", "kevin"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mUser Exists (0.5ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."user_name" = 'andrew' LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "users" ("created_at", "updated_at", "user_name") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", Thu, 13 Feb 2014 22:03:39 UTC +00:00], ["updated_at", Thu, 13 Feb 2014 22:03:39 UTC +00:00], ["user_name", "andrew"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mUser Exists (0.4ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."user_name" = 'max' LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "users" ("created_at", "updated_at", "user_name") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", Thu, 13 Feb 2014 22:03:39 UTC +00:00], ["updated_at", Thu, 13 Feb 2014 22:03:39 UTC +00:00], ["user_name", "max"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (1.5ms)[0m  [1mINSERT INTO "polls" ("author_id", "created_at", "title", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["author_id", 1], ["created_at", Thu, 13 Feb 2014 22:03:39 UTC +00:00], ["title", "A great new! poll!"], ["updated_at", Thu, 13 Feb 2014 22:03:39 UTC +00:00]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "polls" ("author_id", "created_at", "title", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["author_id", 2], ["created_at", Thu, 13 Feb 2014 22:03:39 UTC +00:00], ["title", "An even better poll thant that other one!"], ["updated_at", Thu, 13 Feb 2014 22:03:39 UTC +00:00]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (1.2ms)[0m  [1mINSERT INTO "questions" ("created_at", "poll_id", "text", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", Thu, 13 Feb 2014 22:03:39 UTC +00:00], ["poll_id", 1], ["text", "When do you wake up in the morning?"], ["updated_at", Thu, 13 Feb 2014 22:03:39 UTC +00:00]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "questions" ("created_at", "poll_id", "text", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", Thu, 13 Feb 2014 22:03:39 UTC +00:00], ["poll_id", 1], ["text", "How do you take your coffee?"], ["updated_at", Thu, 13 Feb 2014 22:03:39 UTC +00:00]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "questions" ("created_at", "poll_id", "text", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", Thu, 13 Feb 2014 22:03:39 UTC +00:00], ["poll_id", 2], ["text", "How do you get to work?"], ["updated_at", Thu, 13 Feb 2014 22:03:39 UTC +00:00]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "questions" ("created_at", "poll_id", "text", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", Thu, 13 Feb 2014 22:03:39 UTC +00:00], ["poll_id", 2], ["text", "Are you ever going to let me down?"], ["updated_at", Thu, 13 Feb 2014 22:03:39 UTC +00:00]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "questions" ("created_at", "poll_id", "text", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", Thu, 13 Feb 2014 22:03:39 UTC +00:00], ["poll_id", 2], ["text", "Are you ever going to hurt me?"], ["updated_at", Thu, 13 Feb 2014 22:03:39 UTC +00:00]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.5ms)[0m  INSERT INTO "answer_choices" ("created_at", "question_id", "text", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", Thu, 13 Feb 2014 22:03:39 UTC +00:00], ["question_id", 1], ["text", "6 A.M"], ["updated_at", Thu, 13 Feb 2014 22:03:39 UTC +00:00]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "answer_choices" ("created_at", "question_id", "text", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", Thu, 13 Feb 2014 22:03:39 UTC +00:00], ["question_id", 1], ["text", "7 A.M"], ["updated_at", Thu, 13 Feb 2014 22:03:39 UTC +00:00]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "answer_choices" ("created_at", "question_id", "text", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", Thu, 13 Feb 2014 22:03:39 UTC +00:00], ["question_id", 1], ["text", "8 A.M"], ["updated_at", Thu, 13 Feb 2014 22:03:39 UTC +00:00]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "answer_choices" ("created_at", "question_id", "text", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", Thu, 13 Feb 2014 22:03:39 UTC +00:00], ["question_id", 2], ["text", "Black"], ["updated_at", Thu, 13 Feb 2014 22:03:39 UTC +00:00]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "answer_choices" ("created_at", "question_id", "text", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", Thu, 13 Feb 2014 22:03:39 UTC +00:00], ["question_id", 2], ["text", "with cream"], ["updated_at", Thu, 13 Feb 2014 22:03:39 UTC +00:00]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "answer_choices" ("created_at", "question_id", "text", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", Thu, 13 Feb 2014 22:03:39 UTC +00:00], ["question_id", 2], ["text", "with cream and sugar"], ["updated_at", Thu, 13 Feb 2014 22:03:39 UTC +00:00]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "answer_choices" ("created_at", "question_id", "text", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", Thu, 13 Feb 2014 22:03:39 UTC +00:00], ["question_id", 3], ["text", "I walk"], ["updated_at", Thu, 13 Feb 2014 22:03:39 UTC +00:00]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "answer_choices" ("created_at", "question_id", "text", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", Thu, 13 Feb 2014 22:03:39 UTC +00:00], ["question_id", 3], ["text", "I take the bus"], ["updated_at", Thu, 13 Feb 2014 22:03:39 UTC +00:00]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "answer_choices" ("created_at", "question_id", "text", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", Thu, 13 Feb 2014 22:03:39 UTC +00:00], ["question_id", 3], ["text", "I endure the bart"], ["updated_at", Thu, 13 Feb 2014 22:03:39 UTC +00:00]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mResponse Load (1.3ms)[0m  [1m SELECT responses.*
+ FROM responses
+ JOIN answer_choices
+ ON responses.answer_choice_id = answer_choices.id
+ WHERE
+ responses.user_id = 1
+ AND
+ answer_choices.question_id = (SELECT answer_choices.question_id
+ FROM
+ answer_choices
+ WHERE
+ answer_choices.id = 7)
+
+[0m
+  [1m[35mUser Load (0.7ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (1.7ms)[0m  [1mSELECT COUNT(*) FROM "polls" INNER JOIN "questions" ON "questions"."poll_id" = "polls"."id" INNER JOIN "answer_choices" ON "answer_choices"."question_id" = "questions"."id" WHERE "polls"."author_id" = $1 AND (answer_choices.id = 7)[0m  [["author_id", 1]]
+  [1m[35mSQL (1.3ms)[0m  INSERT INTO "responses" ("answer_choice_id", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4) RETURNING "id"  [["answer_choice_id", 7], ["created_at", Thu, 13 Feb 2014 22:03:39 UTC +00:00], ["updated_at", Thu, 13 Feb 2014 22:03:39 UTC +00:00], ["user_id", 1]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mResponse Load (1.0ms)[0m  [1m SELECT responses.*
+ FROM responses
+ JOIN answer_choices
+ ON responses.answer_choice_id = answer_choices.id
+ WHERE
+ responses.user_id = 2
+ AND
+ answer_choices.question_id = (SELECT answer_choices.question_id
+ FROM
+ answer_choices
+ WHERE
+ answer_choices.id = 2)
+
+[0m
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36m (1.6ms)[0m  [1mSELECT COUNT(*) FROM "polls" INNER JOIN "questions" ON "questions"."poll_id" = "polls"."id" INNER JOIN "answer_choices" ON "answer_choices"."question_id" = "questions"."id" WHERE "polls"."author_id" = $1 AND (answer_choices.id = 2)[0m  [["author_id", 2]]
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "responses" ("answer_choice_id", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4) RETURNING "id"  [["answer_choice_id", 2], ["created_at", Thu, 13 Feb 2014 22:03:39 UTC +00:00], ["updated_at", Thu, 13 Feb 2014 22:03:39 UTC +00:00], ["user_id", 2]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mResponse Load (0.9ms)[0m  [1m SELECT responses.*
+ FROM responses
+ JOIN answer_choices
+ ON responses.answer_choice_id = answer_choices.id
+ WHERE
+ responses.user_id = 2
+ AND
+ answer_choices.question_id = (SELECT answer_choices.question_id
+ FROM
+ answer_choices
+ WHERE
+ answer_choices.id = 6)
+
+[0m
+  [1m[35mUser Load (0.6ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36m (1.5ms)[0m  [1mSELECT COUNT(*) FROM "polls" INNER JOIN "questions" ON "questions"."poll_id" = "polls"."id" INNER JOIN "answer_choices" ON "answer_choices"."question_id" = "questions"."id" WHERE "polls"."author_id" = $1 AND (answer_choices.id = 6)[0m  [["author_id", 2]]
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "responses" ("answer_choice_id", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4) RETURNING "id"  [["answer_choice_id", 6], ["created_at", Thu, 13 Feb 2014 22:03:39 UTC +00:00], ["updated_at", Thu, 13 Feb 2014 22:03:39 UTC +00:00], ["user_id", 2]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mResponse Load (0.8ms)[0m  [1m SELECT responses.*
+ FROM responses
+ JOIN answer_choices
+ ON responses.answer_choice_id = answer_choices.id
+ WHERE
+ responses.user_id = 3
+ AND
+ answer_choices.question_id = (SELECT answer_choices.question_id
+ FROM
+ answer_choices
+ WHERE
+ answer_choices.id = 1)
+
+[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36m (1.5ms)[0m  [1mSELECT COUNT(*) FROM "polls" INNER JOIN "questions" ON "questions"."poll_id" = "polls"."id" INNER JOIN "answer_choices" ON "answer_choices"."question_id" = "questions"."id" WHERE "polls"."author_id" = $1 AND (answer_choices.id = 1)[0m  [["author_id", 3]]
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "responses" ("answer_choice_id", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4) RETURNING "id"  [["answer_choice_id", 1], ["created_at", Thu, 13 Feb 2014 22:03:39 UTC +00:00], ["updated_at", Thu, 13 Feb 2014 22:03:39 UTC +00:00], ["user_id", 3]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mResponse Load (0.8ms)[0m  [1m SELECT responses.*
+ FROM responses
+ JOIN answer_choices
+ ON responses.answer_choice_id = answer_choices.id
+ WHERE
+ responses.user_id = 3
+ AND
+ answer_choices.question_id = (SELECT answer_choices.question_id
+ FROM
+ answer_choices
+ WHERE
+ answer_choices.id = 5)
+
+[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36m (1.4ms)[0m  [1mSELECT COUNT(*) FROM "polls" INNER JOIN "questions" ON "questions"."poll_id" = "polls"."id" INNER JOIN "answer_choices" ON "answer_choices"."question_id" = "questions"."id" WHERE "polls"."author_id" = $1 AND (answer_choices.id = 5)[0m  [["author_id", 3]]
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "responses" ("answer_choice_id", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4) RETURNING "id"  [["answer_choice_id", 5], ["created_at", Thu, 13 Feb 2014 22:03:39 UTC +00:00], ["updated_at", Thu, 13 Feb 2014 22:03:39 UTC +00:00], ["user_id", 3]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[36mUser Load (1.3ms)[0m  [1mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mQuestion Load (0.7ms)[0m  SELECT "questions".* FROM "questions" ORDER BY "questions"."id" ASC LIMIT 1
+  [1m[36mAnswerChoice Load (8.3ms)[0m  [1mSELECT "answer_choices".* FROM "answer_choices" WHERE "answer_choices"."question_id" = $1[0m  [["question_id", 1]]
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mResponse Load (1.3ms)[0m  [1m SELECT responses.*
+ FROM responses
+ JOIN answer_choices
+ ON responses.answer_choice_id = answer_choices.id
+ WHERE
+ responses.user_id = 1
+ AND
+ answer_choices.question_id = (SELECT answer_choices.question_id
+ FROM
+ answer_choices
+ WHERE
+ answer_choices.id = 1)
+
+[0m
+  [1m[35mUser Load (0.7ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (1.5ms)[0m  [1mSELECT COUNT(*) FROM "polls" INNER JOIN "questions" ON "questions"."poll_id" = "polls"."id" INNER JOIN "answer_choices" ON "answer_choices"."question_id" = "questions"."id" WHERE "polls"."author_id" = $1 AND (answer_choices.id = 1)[0m  [["author_id", 1]]
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mResponse Load (1.4ms)[0m   SELECT responses.*
+ FROM responses
+ JOIN answer_choices
+ ON responses.answer_choice_id = answer_choices.id
+ WHERE
+ responses.user_id = 1
+ AND
+ answer_choices.question_id = (SELECT answer_choices.question_id
+ FROM
+ answer_choices
+ WHERE
+ answer_choices.id = 4)
+
+
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (1.4ms)[0m  SELECT COUNT(*) FROM "polls" INNER JOIN "questions" ON "questions"."poll_id" = "polls"."id" INNER JOIN "answer_choices" ON "answer_choices"."question_id" = "questions"."id" WHERE "polls"."author_id" = $1 AND (answer_choices.id = 4)  [["author_id", 1]]
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35mUser Load (0.6ms)[0m  SELECT "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mResponse Load (1.7ms)[0m   SELECT responses.*
+ FROM responses
+ JOIN answer_choices
+ ON responses.answer_choice_id = answer_choices.id
+ WHERE
+ responses.user_id = 3
+ AND
+ answer_choices.question_id = (SELECT answer_choices.question_id
+ FROM
+ answer_choices
+ WHERE
+ answer_choices.id = 4)
+
+
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35m (1.2ms)[0m  SELECT COUNT(*) FROM "polls" INNER JOIN "questions" ON "questions"."poll_id" = "polls"."id" INNER JOIN "answer_choices" ON "answer_choices"."question_id" = "questions"."id" WHERE "polls"."author_id" = $1 AND (answer_choices.id = 4)  [["author_id", 3]]
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+  [1m[36m (157.3ms)[0m  [1mDROP DATABASE IF EXISTS "polls_dev"[0m
+  [1m[35m (359.4ms)[0m  CREATE DATABASE "polls_dev" ENCODING = 'utf8'
+  [1m[36mSQL (2.2ms)[0m  [1mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (9.8ms)[0m  CREATE TABLE "answer_choices" ("id" serial primary key, "question_id" integer, "text" character varying(255), "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36m (1.8ms)[0m  [1mCREATE INDEX "index_answer_choices_on_question_id" ON "answer_choices" USING btree ("question_id")[0m
+  [1m[35m (4.9ms)[0m  CREATE TABLE "polls" ("id" serial primary key, "title" character varying(255) NOT NULL, "author_id" integer NOT NULL, "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36m (2.1ms)[0m  [1mCREATE INDEX "index_polls_on_author_id" ON "polls" USING btree ("author_id")[0m
+  [1m[35m (7.4ms)[0m  CREATE TABLE "questions" ("id" serial primary key, "poll_id" integer, "text" text, "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36m (2.5ms)[0m  [1mCREATE INDEX "index_questions_on_poll_id" ON "questions" USING btree ("poll_id")[0m
+  [1m[35m (4.8ms)[0m  CREATE TABLE "responses" ("id" serial primary key, "user_id" integer, "answer_choice_id" integer, "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36m (2.2ms)[0m  [1mCREATE INDEX "index_responses_on_answer_choice_id" ON "responses" USING btree ("answer_choice_id")[0m
+  [1m[35m (1.7ms)[0m  CREATE INDEX "index_responses_on_user_id" ON "responses" USING btree ("user_id")
+  [1m[36m (5.5ms)[0m  [1mCREATE TABLE "users" ("id" serial primary key, "user_name" character varying(255) NOT NULL, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35m (2.2ms)[0m  CREATE INDEX "index_users_on_user_name" ON "users" USING btree ("user_name")
+  [1m[36m (1.9ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [1m[35m (3.4ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.7ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (0.8ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140213181504')
+  [1m[36m (0.7ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20140213181422')[0m
+  [1m[35m (0.6ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140213181432')
+  [1m[36m (0.5ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20140213181438')[0m
+  [1m[35m (0.6ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140213181455')
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mUser Exists (1.6ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."user_name" = 'kevin' LIMIT 1[0m
+  [1m[35mSQL (5.4ms)[0m  INSERT INTO "users" ("created_at", "updated_at", "user_name") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", Thu, 13 Feb 2014 22:06:03 UTC +00:00], ["updated_at", Thu, 13 Feb 2014 22:06:03 UTC +00:00], ["user_name", "kevin"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mUser Exists (0.6ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."user_name" = 'andrew' LIMIT 1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "users" ("created_at", "updated_at", "user_name") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", Thu, 13 Feb 2014 22:06:03 UTC +00:00], ["updated_at", Thu, 13 Feb 2014 22:06:03 UTC +00:00], ["user_name", "andrew"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mUser Exists (0.4ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."user_name" = 'max' LIMIT 1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "users" ("created_at", "updated_at", "user_name") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", Thu, 13 Feb 2014 22:06:03 UTC +00:00], ["updated_at", Thu, 13 Feb 2014 22:06:03 UTC +00:00], ["user_name", "max"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (1.3ms)[0m  [1mINSERT INTO "polls" ("author_id", "created_at", "title", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["author_id", 1], ["created_at", Thu, 13 Feb 2014 22:06:03 UTC +00:00], ["title", "A great new! poll!"], ["updated_at", Thu, 13 Feb 2014 22:06:03 UTC +00:00]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "polls" ("author_id", "created_at", "title", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["author_id", 2], ["created_at", Thu, 13 Feb 2014 22:06:03 UTC +00:00], ["title", "An even better poll thant that other one!"], ["updated_at", Thu, 13 Feb 2014 22:06:03 UTC +00:00]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (1.7ms)[0m  [1mINSERT INTO "questions" ("created_at", "poll_id", "text", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", Thu, 13 Feb 2014 22:06:03 UTC +00:00], ["poll_id", 1], ["text", "When do you wake up in the morning?"], ["updated_at", Thu, 13 Feb 2014 22:06:03 UTC +00:00]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "questions" ("created_at", "poll_id", "text", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", Thu, 13 Feb 2014 22:06:03 UTC +00:00], ["poll_id", 1], ["text", "How do you take your coffee?"], ["updated_at", Thu, 13 Feb 2014 22:06:03 UTC +00:00]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "questions" ("created_at", "poll_id", "text", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", Thu, 13 Feb 2014 22:06:03 UTC +00:00], ["poll_id", 2], ["text", "How do you get to work?"], ["updated_at", Thu, 13 Feb 2014 22:06:03 UTC +00:00]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "questions" ("created_at", "poll_id", "text", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", Thu, 13 Feb 2014 22:06:03 UTC +00:00], ["poll_id", 2], ["text", "Are you ever going to let me down?"], ["updated_at", Thu, 13 Feb 2014 22:06:03 UTC +00:00]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "questions" ("created_at", "poll_id", "text", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", Thu, 13 Feb 2014 22:06:03 UTC +00:00], ["poll_id", 2], ["text", "Are you ever going to hurt me?"], ["updated_at", Thu, 13 Feb 2014 22:06:03 UTC +00:00]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.4ms)[0m  INSERT INTO "answer_choices" ("created_at", "question_id", "text", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", Thu, 13 Feb 2014 22:06:03 UTC +00:00], ["question_id", 1], ["text", "6 A.M"], ["updated_at", Thu, 13 Feb 2014 22:06:03 UTC +00:00]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "answer_choices" ("created_at", "question_id", "text", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", Thu, 13 Feb 2014 22:06:03 UTC +00:00], ["question_id", 1], ["text", "7 A.M"], ["updated_at", Thu, 13 Feb 2014 22:06:03 UTC +00:00]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "answer_choices" ("created_at", "question_id", "text", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", Thu, 13 Feb 2014 22:06:03 UTC +00:00], ["question_id", 1], ["text", "8 A.M"], ["updated_at", Thu, 13 Feb 2014 22:06:03 UTC +00:00]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "answer_choices" ("created_at", "question_id", "text", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", Thu, 13 Feb 2014 22:06:03 UTC +00:00], ["question_id", 2], ["text", "Black"], ["updated_at", Thu, 13 Feb 2014 22:06:03 UTC +00:00]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "answer_choices" ("created_at", "question_id", "text", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", Thu, 13 Feb 2014 22:06:03 UTC +00:00], ["question_id", 2], ["text", "with cream"], ["updated_at", Thu, 13 Feb 2014 22:06:03 UTC +00:00]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "answer_choices" ("created_at", "question_id", "text", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", Thu, 13 Feb 2014 22:06:03 UTC +00:00], ["question_id", 2], ["text", "with cream and sugar"], ["updated_at", Thu, 13 Feb 2014 22:06:03 UTC +00:00]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "answer_choices" ("created_at", "question_id", "text", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", Thu, 13 Feb 2014 22:06:03 UTC +00:00], ["question_id", 3], ["text", "I walk"], ["updated_at", Thu, 13 Feb 2014 22:06:03 UTC +00:00]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "answer_choices" ("created_at", "question_id", "text", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", Thu, 13 Feb 2014 22:06:03 UTC +00:00], ["question_id", 3], ["text", "I take the bus"], ["updated_at", Thu, 13 Feb 2014 22:06:03 UTC +00:00]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "answer_choices" ("created_at", "question_id", "text", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", Thu, 13 Feb 2014 22:06:03 UTC +00:00], ["question_id", 3], ["text", "I endure the bart"], ["updated_at", Thu, 13 Feb 2014 22:06:03 UTC +00:00]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mResponse Load (1.8ms)[0m  [1m SELECT responses.*
+ FROM responses
+ JOIN answer_choices
+ ON responses.answer_choice_id = answer_choices.id
+ WHERE
+ responses.user_id = 1
+ AND
+ answer_choices.question_id = (SELECT answer_choices.question_id
+ FROM
+ answer_choices
+ WHERE
+ answer_choices.id = 7)
+
+[0m
+  [1m[35mUser Load (0.7ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (1.9ms)[0m  [1mSELECT COUNT(*) FROM "polls" INNER JOIN "questions" ON "questions"."poll_id" = "polls"."id" INNER JOIN "answer_choices" ON "answer_choices"."question_id" = "questions"."id" WHERE "polls"."author_id" = $1 AND (answer_choices.id = 7)[0m  [["author_id", 1]]
+  [1m[35mSQL (1.8ms)[0m  INSERT INTO "responses" ("answer_choice_id", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4) RETURNING "id"  [["answer_choice_id", 7], ["created_at", Thu, 13 Feb 2014 22:06:03 UTC +00:00], ["updated_at", Thu, 13 Feb 2014 22:06:03 UTC +00:00], ["user_id", 1]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mResponse Load (1.3ms)[0m  [1m SELECT responses.*
+ FROM responses
+ JOIN answer_choices
+ ON responses.answer_choice_id = answer_choices.id
+ WHERE
+ responses.user_id = 2
+ AND
+ answer_choices.question_id = (SELECT answer_choices.question_id
+ FROM
+ answer_choices
+ WHERE
+ answer_choices.id = 2)
+
+[0m
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36m (1.6ms)[0m  [1mSELECT COUNT(*) FROM "polls" INNER JOIN "questions" ON "questions"."poll_id" = "polls"."id" INNER JOIN "answer_choices" ON "answer_choices"."question_id" = "questions"."id" WHERE "polls"."author_id" = $1 AND (answer_choices.id = 2)[0m  [["author_id", 2]]
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "responses" ("answer_choice_id", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4) RETURNING "id"  [["answer_choice_id", 2], ["created_at", Thu, 13 Feb 2014 22:06:03 UTC +00:00], ["updated_at", Thu, 13 Feb 2014 22:06:03 UTC +00:00], ["user_id", 2]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mResponse Load (1.2ms)[0m  [1m SELECT responses.*
+ FROM responses
+ JOIN answer_choices
+ ON responses.answer_choice_id = answer_choices.id
+ WHERE
+ responses.user_id = 2
+ AND
+ answer_choices.question_id = (SELECT answer_choices.question_id
+ FROM
+ answer_choices
+ WHERE
+ answer_choices.id = 6)
+
+[0m
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36m (1.5ms)[0m  [1mSELECT COUNT(*) FROM "polls" INNER JOIN "questions" ON "questions"."poll_id" = "polls"."id" INNER JOIN "answer_choices" ON "answer_choices"."question_id" = "questions"."id" WHERE "polls"."author_id" = $1 AND (answer_choices.id = 6)[0m  [["author_id", 2]]
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "responses" ("answer_choice_id", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4) RETURNING "id"  [["answer_choice_id", 6], ["created_at", Thu, 13 Feb 2014 22:06:03 UTC +00:00], ["updated_at", Thu, 13 Feb 2014 22:06:03 UTC +00:00], ["user_id", 2]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[36mUser Load (1.2ms)[0m  [1mSELECT "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mResponse Load (2.3ms)[0m  [1m SELECT responses.*
+ FROM responses
+ JOIN answer_choices
+ ON responses.answer_choice_id = answer_choices.id
+ WHERE
+ responses.user_id = 3
+ AND
+ answer_choices.question_id = (SELECT answer_choices.question_id
+ FROM
+ answer_choices
+ WHERE
+ answer_choices.id = 4)
+
+[0m
+  [1m[35mUser Load (1.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36m (2.1ms)[0m  [1mSELECT COUNT(*) FROM "polls" INNER JOIN "questions" ON "questions"."poll_id" = "polls"."id" INNER JOIN "answer_choices" ON "answer_choices"."question_id" = "questions"."id" WHERE "polls"."author_id" = $1 AND (answer_choices.id = 4)[0m  [["author_id", 3]]
+  [1m[35mSQL (2.8ms)[0m  INSERT INTO "responses" ("answer_choice_id", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4) RETURNING "id"  [["answer_choice_id", 4], ["created_at", Thu, 13 Feb 2014 22:06:41 UTC +00:00], ["updated_at", Thu, 13 Feb 2014 22:06:41 UTC +00:00], ["user_id", 3]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35mQuestion Load (0.7ms)[0m  SELECT "questions".* FROM "questions" ORDER BY "questions"."id" ASC LIMIT 1
+  [1m[36mQuestion Load (0.4ms)[0m  [1mSELECT "questions".* FROM "questions" ORDER BY "questions"."id" ASC LIMIT 1[0m
+  [1m[35m (38.7ms)[0m  SELECT COUNT(responses) AS count_responses, answer_choices AS answer_choices FROM "responses" INNER JOIN "answer_choices" ON "responses"."answer_choice_id" = "answer_choices"."id" WHERE "answer_choices"."question_id" = $1 GROUP BY answer_choices  [["question_id", 1]]
+  [1m[36m (0.8ms)[0m  [1mSELECT COUNT(responses_id) AS count_responses_id, answer_choices AS answer_choices FROM "responses" INNER JOIN "answer_choices" ON "responses"."answer_choice_id" = "answer_choices"."id" WHERE "answer_choices"."question_id" = $1 GROUP BY answer_choices[0m  [["question_id", 1]]
+PG::UndefinedColumn: ERROR:  column "responses_id" does not exist
+LINE 1: SELECT COUNT(responses_id) AS count_responses_id, answer_cho...
+                     ^
+: SELECT COUNT(responses_id) AS count_responses_id, answer_choices AS answer_choices FROM "responses" INNER JOIN "answer_choices" ON "responses"."answer_choice_id" = "answer_choices"."id" WHERE "answer_choices"."question_id" = $1 GROUP BY answer_choices
+  [1m[35m (1.6ms)[0m  SELECT COUNT(responses.id) AS count_responses_id, answer_choices AS answer_choices FROM "responses" INNER JOIN "answer_choices" ON "responses"."answer_choice_id" = "answer_choices"."id" WHERE "answer_choices"."question_id" = $1 GROUP BY answer_choices  [["question_id", 1]]
+  [1m[36m (1.3ms)[0m  [1mSELECT COUNT(*) AS count_all, answer_choices AS answer_choices FROM "responses" INNER JOIN "answer_choices" ON "responses"."answer_choice_id" = "answer_choices"."id" WHERE "answer_choices"."question_id" = $1 GROUP BY answer_choices[0m  [["question_id", 1]]
+  [1m[35m (0.9ms)[0m  SELECT COUNT(*) AS count_all, answer_choices AS answer_choices FROM "responses" INNER JOIN "answer_choices" ON "responses"."answer_choice_id" = "answer_choices"."id" WHERE "answer_choices"."question_id" = $1 GROUP BY answer_choices  [["question_id", 1]]
+  [1m[36m (0.9ms)[0m  [1mSELECT COUNT(responses.id) AS count_responses_id, answer_choices AS answer_choices FROM "responses" INNER JOIN "answer_choices" ON "responses"."answer_choice_id" = "answer_choices"."id" WHERE "answer_choices"."question_id" = $1 GROUP BY answer_choices[0m  [["question_id", 1]]
+  [1m[35mResponse Load (0.6ms)[0m  SELECT 'answer_choices.text', COUNT[responses.id] as tally FROM "responses" INNER JOIN "answer_choices" ON "responses"."answer_choice_id" = "answer_choices"."id" WHERE "answer_choices"."question_id" = $1 GROUP BY answer_choices  [["question_id", 1]]
+PG::UndefinedColumn: ERROR:  column "count" does not exist
+LINE 1: SELECT 'answer_choices.text', COUNT[responses.id] as tally F...
+                                      ^
+: SELECT 'answer_choices.text', COUNT[responses.id] as tally FROM "responses" INNER JOIN "answer_choices" ON "responses"."answer_choice_id" = "answer_choices"."id" WHERE "answer_choices"."question_id" = $1 GROUP BY answer_choices
+  [1m[36mResponse Load (0.5ms)[0m  [1mSELECT 'answer_choices.text', COUNT[responses.id] as tally FROM "responses" INNER JOIN "answer_choices" ON "responses"."answer_choice_id" = "answer_choices"."id" WHERE "answer_choices"."question_id" = $1 GROUP BY answer_choices[0m  [["question_id", 1]]
+PG::UndefinedColumn: ERROR:  column "count" does not exist
+LINE 1: SELECT 'answer_choices.text', COUNT[responses.id] as tally F...
+                                      ^
+: SELECT 'answer_choices.text', COUNT[responses.id] as tally FROM "responses" INNER JOIN "answer_choices" ON "responses"."answer_choice_id" = "answer_choices"."id" WHERE "answer_choices"."question_id" = $1 GROUP BY answer_choices
+  [1m[35mResponse Load (1.9ms)[0m  SELECT 'answer_choices.text', COUNT(responses.id) as tally FROM "responses" INNER JOIN "answer_choices" ON "responses"."answer_choice_id" = "answer_choices"."id" WHERE "answer_choices"."question_id" = $1 GROUP BY answer_choices  [["question_id", 1]]
+  [1m[36mResponse Load (1.1ms)[0m  [1mSELECT 'answer_choices.text', COUNT(responses.id) as tally FROM "responses" INNER JOIN "answer_choices" ON "responses"."answer_choice_id" = "answer_choices"."id" WHERE "answer_choices"."question_id" = $1 GROUP BY answer_choices[0m  [["question_id", 1]]
+  [1m[35mAnswerChoice Load (2.0ms)[0m  SELECT 'answer_choices.text', COUNT(responses.id) as tally FROM "answer_choices" INNER JOIN "responses" ON "responses"."answer_choice_id" = "answer_choices"."id" WHERE "answer_choices"."question_id" = $1 GROUP BY answer_choices  [["question_id", 1]]
+  [1m[36mAnswerChoice Load (1.6ms)[0m  [1mSELECT 'answer_choices.text', COUNT(responses.id) as tally FROM "answer_choices" INNER JOIN "responses" ON "responses"."answer_choice_id" = "answer_choices"."id" WHERE "answer_choices"."question_id" = $1 GROUP BY answer_choices[0m  [["question_id", 1]]
+  [1m[35mAnswerChoice Load (0.7ms)[0m  SELECT answer_choices.text, COUNT(responses.id) as tally FROM "answer_choices" INNER JOIN "responses" ON "responses"."answer_choice_id" = "answer_choices"."id" WHERE "answer_choices"."question_id" = $1 GROUP BY answer_choices  [["question_id", 1]]
+PG::GroupingError: ERROR:  column "answer_choices.text" must appear in the GROUP BY clause or be used in an aggregate function
+LINE 1: SELECT answer_choices.text, COUNT(responses.id) as tally FRO...
+               ^
+: SELECT answer_choices.text, COUNT(responses.id) as tally FROM "answer_choices" INNER JOIN "responses" ON "responses"."answer_choice_id" = "answer_choices"."id" WHERE "answer_choices"."question_id" = $1 GROUP BY answer_choices
+  [1m[36mAnswerChoice Load (0.8ms)[0m  [1mSELECT answer_choices.text, COUNT(responses.id) as tally FROM "answer_choices" INNER JOIN "responses" ON "responses"."answer_choice_id" = "answer_choices"."id" WHERE "answer_choices"."question_id" = $1 GROUP BY answer_choices[0m  [["question_id", 1]]
+PG::GroupingError: ERROR:  column "answer_choices.text" must appear in the GROUP BY clause or be used in an aggregate function
+LINE 1: SELECT answer_choices.text, COUNT(responses.id) as tally FRO...
+               ^
+: SELECT answer_choices.text, COUNT(responses.id) as tally FROM "answer_choices" INNER JOIN "responses" ON "responses"."answer_choice_id" = "answer_choices"."id" WHERE "answer_choices"."question_id" = $1 GROUP BY answer_choices
+  [1m[35mAnswerChoice Load (0.7ms)[0m  SELECT answer_choices.text, COUNT(responses.id) as tally FROM "answer_choices" INNER JOIN "responses" ON "responses"."answer_choice_id" = "answer_choices"."id" WHERE "answer_choices"."question_id" = $1 GROUP BY answer_choices ORDER BY "answer_choices"."id" ASC LIMIT 1  [["question_id", 1]]
+PG::GroupingError: ERROR:  column "answer_choices.text" must appear in the GROUP BY clause or be used in an aggregate function
+LINE 1: SELECT  answer_choices.text, COUNT(responses.id) as tally FR...
+                ^
+: SELECT  answer_choices.text, COUNT(responses.id) as tally FROM "answer_choices" INNER JOIN "responses" ON "responses"."answer_choice_id" = "answer_choices"."id" WHERE "answer_choices"."question_id" = $1 GROUP BY answer_choices  ORDER BY "answer_choices"."id" ASC LIMIT 1
+  [1m[36mAnswerChoice Load (0.6ms)[0m  [1mSELECT id, COUNT(responses.id) as tally FROM "answer_choices" INNER JOIN "responses" ON "responses"."answer_choice_id" = "answer_choices"."id" WHERE "answer_choices"."question_id" = $1 GROUP BY answer_choices[0m  [["question_id", 1]]
+PG::AmbiguousColumn: ERROR:  column reference "id" is ambiguous
+LINE 1: SELECT id, COUNT(responses.id) as tally FROM "answer_choices...
+               ^
+: SELECT id, COUNT(responses.id) as tally FROM "answer_choices" INNER JOIN "responses" ON "responses"."answer_choice_id" = "answer_choices"."id" WHERE "answer_choices"."question_id" = $1 GROUP BY answer_choices
+  [1m[35mAnswerChoice Load (0.8ms)[0m  SELECT answer_choices.id, COUNT(responses.id) as tally FROM "answer_choices" INNER JOIN "responses" ON "responses"."answer_choice_id" = "answer_choices"."id" WHERE "answer_choices"."question_id" = $1 GROUP BY answer_choices  [["question_id", 1]]
+PG::GroupingError: ERROR:  column "answer_choices.id" must appear in the GROUP BY clause or be used in an aggregate function
+LINE 1: SELECT answer_choices.id, COUNT(responses.id) as tally FROM ...
+               ^
+: SELECT answer_choices.id, COUNT(responses.id) as tally FROM "answer_choices" INNER JOIN "responses" ON "responses"."answer_choice_id" = "answer_choices"."id" WHERE "answer_choices"."question_id" = $1 GROUP BY answer_choices
+  [1m[36mAnswerChoice Load (1.3ms)[0m  [1mSELECT answer_choices.id, COUNT(responses.id) as tally FROM "answer_choices" INNER JOIN "responses" ON "responses"."answer_choice_id" = "answer_choices"."id" WHERE "answer_choices"."question_id" = $1 GROUP BY answer_choices.id[0m  [["question_id", 1]]
+  [1m[35mAnswerChoice Load (1.4ms)[0m  SELECT answer_choices.text, COUNT(responses.id) as tally FROM "answer_choices" INNER JOIN "responses" ON "responses"."answer_choice_id" = "answer_choices"."id" WHERE "answer_choices"."question_id" = $1 GROUP BY answer_choices.id  [["question_id", 1]]
+  [1m[36mAnswerChoice Load (1.6ms)[0m  [1mSELECT answer_choices.text, COUNT(responses.id) as tally FROM "answer_choices" INNER JOIN "responses" ON "responses"."answer_choice_id" = "answer_choices"."id" WHERE "answer_choices"."question_id" = $1 GROUP BY answer_choices.text[0m  [["question_id", 1]]
+  [1m[35mAnswerChoice Load (64.9ms)[0m  SELECT answer_choices.text, SUM(responses.id) as tally FROM "answer_choices" INNER JOIN "responses" ON "responses"."answer_choice_id" = "answer_choices"."id" WHERE "answer_choices"."question_id" = $1 GROUP BY answer_choices.text  [["question_id", 1]]
+  [1m[36mAnswerChoice Load (0.6ms)[0m  [1mSELECT answer_choices.text, SUM(responses.id) as tally FROM "answer_choices" WHERE "answer_choices"."question_id" = $1[0m  [["question_id", 1]]
+PG::UndefinedTable: ERROR:  missing FROM-clause entry for table "responses"
+LINE 1: SELECT answer_choices.text, SUM(responses.id) as tally FROM ...
+                                        ^
+: SELECT answer_choices.text, SUM(responses.id) as tally FROM "answer_choices"  WHERE "answer_choices"."question_id" = $1
+  [1m[35mAnswerChoice Load (0.5ms)[0m  SELECT answer_choices.text, SUM(responses.id) as tally FROM "answer_choices" WHERE "answer_choices"."question_id" = $1 ORDER BY "answer_choices"."id" ASC LIMIT 1  [["question_id", 1]]
+PG::UndefinedTable: ERROR:  missing FROM-clause entry for table "responses"
+LINE 1: SELECT  answer_choices.text, SUM(responses.id) as tally FROM...
+                                         ^
+: SELECT  answer_choices.text, SUM(responses.id) as tally FROM "answer_choices"  WHERE "answer_choices"."question_id" = $1  ORDER BY "answer_choices"."id" ASC LIMIT 1
+  [1m[36mAnswerChoice Load (0.6ms)[0m  [1mSELECT answer_choices.text, SUM(responses.id) as tally FROM "answer_choices" INNER JOIN "responses" ON "responses"."answer_choice_id" = "answer_choices"."id" WHERE "answer_choices"."question_id" = $1[0m  [["question_id", 1]]
+PG::GroupingError: ERROR:  column "answer_choices.text" must appear in the GROUP BY clause or be used in an aggregate function
+LINE 1: SELECT answer_choices.text, SUM(responses.id) as tally FROM ...
+               ^
+: SELECT answer_choices.text, SUM(responses.id) as tally FROM "answer_choices" INNER JOIN "responses" ON "responses"."answer_choice_id" = "answer_choices"."id" WHERE "answer_choices"."question_id" = $1
+  [1m[35mAnswerChoice Load (1.3ms)[0m  SELECT answer_choices.text, SUM(responses.id) as tally FROM "answer_choices" INNER JOIN "responses" ON "responses"."answer_choice_id" = "answer_choices"."id" WHERE "answer_choices"."question_id" = $1 GROUP BY answer_choices.text  [["question_id", 1]]
+  [1m[36mQuestion Load (51.2ms)[0m  [1mSELECT "questions".* FROM "questions" INNER JOIN "answer_choices" ON "answer_choices"."question_id" = "questions"."id" INNER JOIN "answer_choices" "answer_choices_questions_join" ON "answer_choices_questions_join"."question_id" = "questions"."id" INNER JOIN "responses" ON "responses"."answer_choice_id" = "answer_choices_questions_join"."id" ORDER BY "questions"."id" ASC LIMIT 1[0m
+  [1m[35mQuestion Load (2.2ms)[0m  SELECT answer_choices.text, COUNT(responses.id) AS tally FROM "questions" INNER JOIN "answer_choices" ON "answer_choices"."question_id" = "questions"."id" INNER JOIN "answer_choices" "answer_choices_questions_join" ON "answer_choices_questions_join"."question_id" = "questions"."id" INNER JOIN "responses" ON "responses"."answer_choice_id" = "answer_choices_questions_join"."id" GROUP BY answer_choices.text
+  [1m[36mQuestion Load (0.7ms)[0m  [1mSELECT "questions".* FROM "questions" ORDER BY "questions"."id" ASC LIMIT 1[0m
+  [1m[35mQuestion Load (0.6ms)[0m  SELECT "questions".* FROM "questions" ORDER BY "questions"."id" DESC LIMIT 1
+  [1m[36mQuestion Load (1.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (1.5ms)[0m  SELECT COUNT(responses.id) AS count_responses_id, answer_choices.text AS answer_choices_text FROM "questions" INNER JOIN "answer_choices" ON "answer_choices"."question_id" = "questions"."id" INNER JOIN "answer_choices" "answer_choices_questions_join" ON "answer_choices_questions_join"."question_id" = "questions"."id" INNER JOIN "responses" ON "responses"."answer_choice_id" = "answer_choices_questions_join"."id" GROUP BY answer_choices.text
+  [1m[36mQuestion Load (1.4ms)[0m  [1mSELECT answer_choices.text FROM "questions" INNER JOIN "answer_choices" ON "answer_choices"."question_id" = "questions"."id" INNER JOIN "answer_choices" "answer_choices_questions_join" ON "answer_choices_questions_join"."question_id" = "questions"."id" INNER JOIN "responses" ON "responses"."answer_choice_id" = "answer_choices_questions_join"."id" GROUP BY answer_choices.text[0m
+  [1m[35mQuestion Load (0.7ms)[0m  SELECT answer_choices.text, responses.id FROM "questions" INNER JOIN "answer_choices" ON "answer_choices"."question_id" = "questions"."id" INNER JOIN "answer_choices" "answer_choices_questions_join" ON "answer_choices_questions_join"."question_id" = "questions"."id" INNER JOIN "responses" ON "responses"."answer_choice_id" = "answer_choices_questions_join"."id" GROUP BY answer_choices.text
+PG::GroupingError: ERROR:  column "responses.id" must appear in the GROUP BY clause or be used in an aggregate function
+LINE 1: SELECT answer_choices.text, responses.id FROM "questions" IN...
+                                    ^
+: SELECT answer_choices.text, responses.id FROM "questions" INNER JOIN "answer_choices" ON "answer_choices"."question_id" = "questions"."id" INNER JOIN "answer_choices" "answer_choices_questions_join" ON "answer_choices_questions_join"."question_id" = "questions"."id" INNER JOIN "responses" ON "responses"."answer_choice_id" = "answer_choices_questions_join"."id" GROUP BY answer_choices.text
+  [1m[36m (2.1ms)[0m  [1mSELECT SUM(responses.id) AS sum_responses_id, answer_choices.text AS answer_choices_text FROM "questions" INNER JOIN "answer_choices" ON "answer_choices"."question_id" = "questions"."id" INNER JOIN "answer_choices" "answer_choices_questions_join" ON "answer_choices_questions_join"."question_id" = "questions"."id" INNER JOIN "responses" ON "responses"."answer_choice_id" = "answer_choices_questions_join"."id" GROUP BY answer_choices.text[0m
+DEPRECATION WARNING: It looks like you are eager loading table(s) (one of: answer_choices) that are referenced in a string SQL snippet. For example: 
+
+    Post.includes(:comments).where("comments.title = 'foo'")
+
+Currently, Active Record recognizes the table in the string, and knows to JOIN the comments table to the query, rather than loading comments in a separate query. However, doing this without writing a full-blown SQL parser is inherently flawed. Since we don't want to write an SQL parser, we are removing this functionality. From now on, you must explicitly tell Active Record when you are referencing a table from a string:
+
+    Post.includes(:comments).where("comments.title = 'foo'").references(:comments)
+
+If you don't rely on implicit join references you can disable the feature entirely by setting `config.active_record.disable_implicit_join_references = true`. (called from __pry__ at (pry):54)
+  [1m[35m (1.5ms)[0m  SELECT COUNT(DISTINCT responses.id) AS count_responses_id, answer_choices.text AS answer_choices_text FROM "questions" LEFT OUTER JOIN "answer_choices" ON "answer_choices"."question_id" = "questions"."id" LEFT OUTER JOIN "answer_choices" "answer_choices_questions_join" ON "answer_choices_questions_join"."question_id" = "questions"."id" LEFT OUTER JOIN "responses" ON "responses"."answer_choice_id" = "answer_choices_questions_join"."id" GROUP BY answer_choices.text
+DEPRECATION WARNING: It looks like you are eager loading table(s) (one of: answer_choices) that are referenced in a string SQL snippet. For example: 
+
+    Post.includes(:comments).where("comments.title = 'foo'")
+
+Currently, Active Record recognizes the table in the string, and knows to JOIN the comments table to the query, rather than loading comments in a separate query. However, doing this without writing a full-blown SQL parser is inherently flawed. Since we don't want to write an SQL parser, we are removing this functionality. From now on, you must explicitly tell Active Record when you are referencing a table from a string:
+
+    Post.includes(:comments).where("comments.title = 'foo'").references(:comments)
+
+If you don't rely on implicit join references you can disable the feature entirely by setting `config.active_record.disable_implicit_join_references = true`. (called from __pry__ at (pry):55)
+  [1m[36m (1.8ms)[0m  [1mSELECT SUM(responses.id) AS sum_responses_id, answer_choices.text AS answer_choices_text FROM "questions" LEFT OUTER JOIN "answer_choices" ON "answer_choices"."question_id" = "questions"."id" LEFT OUTER JOIN "answer_choices" "answer_choices_questions_join" ON "answer_choices_questions_join"."question_id" = "questions"."id" LEFT OUTER JOIN "responses" ON "responses"."answer_choice_id" = "answer_choices_questions_join"."id" GROUP BY answer_choices.text[0m
+DEPRECATION WARNING: It looks like you are eager loading table(s) (one of: answer_choices) that are referenced in a string SQL snippet. For example: 
+
+    Post.includes(:comments).where("comments.title = 'foo'")
+
+Currently, Active Record recognizes the table in the string, and knows to JOIN the comments table to the query, rather than loading comments in a separate query. However, doing this without writing a full-blown SQL parser is inherently flawed. Since we don't want to write an SQL parser, we are removing this functionality. From now on, you must explicitly tell Active Record when you are referencing a table from a string:
+
+    Post.includes(:comments).where("comments.title = 'foo'").references(:comments)
+
+If you don't rely on implicit join references you can disable the feature entirely by setting `config.active_record.disable_implicit_join_references = true`. (called from __pry__ at (pry):56)
+  [1m[35m (2.1ms)[0m  SELECT COUNT(DISTINCT responses.id) AS count_responses_id, answer_choices.text AS answer_choices_text FROM "questions" LEFT OUTER JOIN "answer_choices" ON "answer_choices"."question_id" = "questions"."id" LEFT OUTER JOIN "answer_choices" "answer_choices_questions_join" ON "answer_choices_questions_join"."question_id" = "questions"."id" LEFT OUTER JOIN "responses" ON "responses"."answer_choice_id" = "answer_choices_questions_join"."id" GROUP BY answer_choices.text
+  [1m[36m (142.6ms)[0m  [1mDROP DATABASE IF EXISTS "polls_dev"[0m
+  [1m[35m (682.2ms)[0m  CREATE DATABASE "polls_dev" ENCODING = 'utf8'
+  [1m[36mSQL (2.3ms)[0m  [1mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (7.5ms)[0m  CREATE TABLE "answer_choices" ("id" serial primary key, "question_id" integer, "text" character varying(255), "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36m (1.6ms)[0m  [1mCREATE INDEX "index_answer_choices_on_question_id" ON "answer_choices" USING btree ("question_id")[0m
+  [1m[35m (5.8ms)[0m  CREATE TABLE "polls" ("id" serial primary key, "title" character varying(255) NOT NULL, "author_id" integer NOT NULL, "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36m (1.4ms)[0m  [1mCREATE INDEX "index_polls_on_author_id" ON "polls" USING btree ("author_id")[0m
+  [1m[35m (5.5ms)[0m  CREATE TABLE "questions" ("id" serial primary key, "poll_id" integer, "text" text, "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36m (1.9ms)[0m  [1mCREATE INDEX "index_questions_on_poll_id" ON "questions" USING btree ("poll_id")[0m
+  [1m[35m (3.6ms)[0m  CREATE TABLE "responses" ("id" serial primary key, "user_id" integer, "answer_choice_id" integer, "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36m (1.3ms)[0m  [1mCREATE INDEX "index_responses_on_answer_choice_id" ON "responses" USING btree ("answer_choice_id")[0m
+  [1m[35m (1.4ms)[0m  CREATE INDEX "index_responses_on_user_id" ON "responses" USING btree ("user_id")
+  [1m[36m (4.4ms)[0m  [1mCREATE TABLE "users" ("id" serial primary key, "user_name" character varying(255) NOT NULL, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35m (2.2ms)[0m  CREATE INDEX "index_users_on_user_name" ON "users" USING btree ("user_name")
+  [1m[36m (1.3ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [1m[35m (1.5ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.5ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (0.7ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140213181504')
+  [1m[36m (0.8ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20140213181422')[0m
+  [1m[35m (0.7ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140213181432')
+  [1m[36m (0.4ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20140213181438')[0m
+  [1m[35m (0.4ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140213181455')
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mUser Exists (1.4ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."user_name" = 'kevin' LIMIT 1[0m
+  [1m[35mSQL (42.1ms)[0m  INSERT INTO "users" ("created_at", "updated_at", "user_name") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", Thu, 13 Feb 2014 22:42:24 UTC +00:00], ["updated_at", Thu, 13 Feb 2014 22:42:24 UTC +00:00], ["user_name", "kevin"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mUser Exists (0.6ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."user_name" = 'andrew' LIMIT 1[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "users" ("created_at", "updated_at", "user_name") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", Thu, 13 Feb 2014 22:42:24 UTC +00:00], ["updated_at", Thu, 13 Feb 2014 22:42:24 UTC +00:00], ["user_name", "andrew"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mUser Exists (0.4ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."user_name" = 'max' LIMIT 1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "users" ("created_at", "updated_at", "user_name") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", Thu, 13 Feb 2014 22:42:24 UTC +00:00], ["updated_at", Thu, 13 Feb 2014 22:42:24 UTC +00:00], ["user_name", "max"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (1.8ms)[0m  [1mINSERT INTO "polls" ("author_id", "created_at", "title", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["author_id", 1], ["created_at", Thu, 13 Feb 2014 22:42:24 UTC +00:00], ["title", "A great new! poll!"], ["updated_at", Thu, 13 Feb 2014 22:42:24 UTC +00:00]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.9ms)[0m  INSERT INTO "polls" ("author_id", "created_at", "title", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["author_id", 2], ["created_at", Thu, 13 Feb 2014 22:42:24 UTC +00:00], ["title", "An even better poll thant that other one!"], ["updated_at", Thu, 13 Feb 2014 22:42:24 UTC +00:00]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (1.7ms)[0m  [1mINSERT INTO "questions" ("created_at", "poll_id", "text", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", Thu, 13 Feb 2014 22:42:24 UTC +00:00], ["poll_id", 1], ["text", "When do you wake up in the morning?"], ["updated_at", Thu, 13 Feb 2014 22:42:24 UTC +00:00]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "questions" ("created_at", "poll_id", "text", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", Thu, 13 Feb 2014 22:42:24 UTC +00:00], ["poll_id", 1], ["text", "How do you take your coffee?"], ["updated_at", Thu, 13 Feb 2014 22:42:24 UTC +00:00]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "questions" ("created_at", "poll_id", "text", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", Thu, 13 Feb 2014 22:42:24 UTC +00:00], ["poll_id", 2], ["text", "How do you get to work?"], ["updated_at", Thu, 13 Feb 2014 22:42:24 UTC +00:00]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "questions" ("created_at", "poll_id", "text", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", Thu, 13 Feb 2014 22:42:24 UTC +00:00], ["poll_id", 2], ["text", "Are you ever going to let me down?"], ["updated_at", Thu, 13 Feb 2014 22:42:24 UTC +00:00]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "questions" ("created_at", "poll_id", "text", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", Thu, 13 Feb 2014 22:42:24 UTC +00:00], ["poll_id", 2], ["text", "Are you ever going to hurt me?"], ["updated_at", Thu, 13 Feb 2014 22:42:24 UTC +00:00]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.7ms)[0m  INSERT INTO "answer_choices" ("created_at", "question_id", "text", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", Thu, 13 Feb 2014 22:42:24 UTC +00:00], ["question_id", 1], ["text", "6 A.M"], ["updated_at", Thu, 13 Feb 2014 22:42:24 UTC +00:00]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "answer_choices" ("created_at", "question_id", "text", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", Thu, 13 Feb 2014 22:42:24 UTC +00:00], ["question_id", 1], ["text", "7 A.M"], ["updated_at", Thu, 13 Feb 2014 22:42:24 UTC +00:00]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "answer_choices" ("created_at", "question_id", "text", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", Thu, 13 Feb 2014 22:42:24 UTC +00:00], ["question_id", 1], ["text", "8 A.M"], ["updated_at", Thu, 13 Feb 2014 22:42:24 UTC +00:00]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "answer_choices" ("created_at", "question_id", "text", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", Thu, 13 Feb 2014 22:42:24 UTC +00:00], ["question_id", 2], ["text", "Black"], ["updated_at", Thu, 13 Feb 2014 22:42:24 UTC +00:00]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "answer_choices" ("created_at", "question_id", "text", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", Thu, 13 Feb 2014 22:42:24 UTC +00:00], ["question_id", 2], ["text", "with cream"], ["updated_at", Thu, 13 Feb 2014 22:42:24 UTC +00:00]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "answer_choices" ("created_at", "question_id", "text", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", Thu, 13 Feb 2014 22:42:24 UTC +00:00], ["question_id", 2], ["text", "with cream and sugar"], ["updated_at", Thu, 13 Feb 2014 22:42:24 UTC +00:00]]
+  [1m[35m (0.6ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "answer_choices" ("created_at", "question_id", "text", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", Thu, 13 Feb 2014 22:42:24 UTC +00:00], ["question_id", 3], ["text", "I walk"], ["updated_at", Thu, 13 Feb 2014 22:42:24 UTC +00:00]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "answer_choices" ("created_at", "question_id", "text", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", Thu, 13 Feb 2014 22:42:24 UTC +00:00], ["question_id", 3], ["text", "I take the bus"], ["updated_at", Thu, 13 Feb 2014 22:42:24 UTC +00:00]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "answer_choices" ("created_at", "question_id", "text", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", Thu, 13 Feb 2014 22:42:24 UTC +00:00], ["question_id", 3], ["text", "I endure the bart"], ["updated_at", Thu, 13 Feb 2014 22:42:24 UTC +00:00]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mResponse Load (1.8ms)[0m  [1m SELECT responses.*
+ FROM responses
+ JOIN answer_choices
+ ON responses.answer_choice_id = answer_choices.id
+ WHERE
+ responses.user_id = 1
+ AND
+ answer_choices.question_id = (SELECT answer_choices.question_id
+ FROM
+ answer_choices
+ WHERE
+ answer_choices.id = 7)
+
+[0m
+  [1m[35mUser Load (0.8ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (1.9ms)[0m  [1mSELECT COUNT(*) FROM "polls" INNER JOIN "questions" ON "questions"."poll_id" = "polls"."id" INNER JOIN "answer_choices" ON "answer_choices"."question_id" = "questions"."id" WHERE "polls"."author_id" = $1 AND (answer_choices.id = 7)[0m  [["author_id", 1]]
+  [1m[35mSQL (1.7ms)[0m  INSERT INTO "responses" ("answer_choice_id", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4) RETURNING "id"  [["answer_choice_id", 7], ["created_at", Thu, 13 Feb 2014 22:42:25 UTC +00:00], ["updated_at", Thu, 13 Feb 2014 22:42:25 UTC +00:00], ["user_id", 1]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mResponse Load (1.0ms)[0m  [1m SELECT responses.*
+ FROM responses
+ JOIN answer_choices
+ ON responses.answer_choice_id = answer_choices.id
+ WHERE
+ responses.user_id = 2
+ AND
+ answer_choices.question_id = (SELECT answer_choices.question_id
+ FROM
+ answer_choices
+ WHERE
+ answer_choices.id = 2)
+
+[0m
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36m (1.6ms)[0m  [1mSELECT COUNT(*) FROM "polls" INNER JOIN "questions" ON "questions"."poll_id" = "polls"."id" INNER JOIN "answer_choices" ON "answer_choices"."question_id" = "questions"."id" WHERE "polls"."author_id" = $1 AND (answer_choices.id = 2)[0m  [["author_id", 2]]
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "responses" ("answer_choice_id", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4) RETURNING "id"  [["answer_choice_id", 2], ["created_at", Thu, 13 Feb 2014 22:42:25 UTC +00:00], ["updated_at", Thu, 13 Feb 2014 22:42:25 UTC +00:00], ["user_id", 2]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mResponse Load (0.9ms)[0m  [1m SELECT responses.*
+ FROM responses
+ JOIN answer_choices
+ ON responses.answer_choice_id = answer_choices.id
+ WHERE
+ responses.user_id = 2
+ AND
+ answer_choices.question_id = (SELECT answer_choices.question_id
+ FROM
+ answer_choices
+ WHERE
+ answer_choices.id = 6)
+
+[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36m (1.4ms)[0m  [1mSELECT COUNT(*) FROM "polls" INNER JOIN "questions" ON "questions"."poll_id" = "polls"."id" INNER JOIN "answer_choices" ON "answer_choices"."question_id" = "questions"."id" WHERE "polls"."author_id" = $1 AND (answer_choices.id = 6)[0m  [["author_id", 2]]
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "responses" ("answer_choice_id", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4) RETURNING "id"  [["answer_choice_id", 6], ["created_at", Thu, 13 Feb 2014 22:42:25 UTC +00:00], ["updated_at", Thu, 13 Feb 2014 22:42:25 UTC +00:00], ["user_id", 2]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+DEPRECATION WARNING: It looks like you are eager loading table(s) (one of: answer_choices) that are referenced in a string SQL snippet. For example: 
+
+    Post.includes(:comments).where("comments.title = 'foo'")
+
+Currently, Active Record recognizes the table in the string, and knows to JOIN the comments table to the query, rather than loading comments in a separate query. However, doing this without writing a full-blown SQL parser is inherently flawed. Since we don't want to write an SQL parser, we are removing this functionality. From now on, you must explicitly tell Active Record when you are referencing a table from a string:
+
+    Post.includes(:comments).where("comments.title = 'foo'").references(:comments)
+
+If you don't rely on implicit join references you can disable the feature entirely by setting `config.active_record.disable_implicit_join_references = true`. (called from __pry__ at (pry):1)
+  [1m[36m (4.9ms)[0m  [1mSELECT COUNT(DISTINCT responses.id) AS count_responses_id, answer_choices.text AS answer_choices_text FROM "questions" LEFT OUTER JOIN "answer_choices" ON "answer_choices"."question_id" = "questions"."id" LEFT OUTER JOIN "answer_choices" "answer_choices_questions_join" ON "answer_choices_questions_join"."question_id" = "questions"."id" LEFT OUTER JOIN "responses" ON "responses"."answer_choice_id" = "answer_choices_questions_join"."id" GROUP BY answer_choices.text[0m
+DEPRECATION WARNING: It looks like you are eager loading table(s) (one of: answer_choices) that are referenced in a string SQL snippet. For example: 
+
+    Post.includes(:comments).where("comments.title = 'foo'")
+
+Currently, Active Record recognizes the table in the string, and knows to JOIN the comments table to the query, rather than loading comments in a separate query. However, doing this without writing a full-blown SQL parser is inherently flawed. Since we don't want to write an SQL parser, we are removing this functionality. From now on, you must explicitly tell Active Record when you are referencing a table from a string:
+
+    Post.includes(:comments).where("comments.title = 'foo'").references(:comments)
+
+If you don't rely on implicit join references you can disable the feature entirely by setting `config.active_record.disable_implicit_join_references = true`. (called from __pry__ at (pry):2)
+  [1m[35m (2.2ms)[0m  SELECT COUNT(DISTINCT responses.id) AS count_responses_id, answer_choices.text AS answer_choices_text FROM "questions" LEFT OUTER JOIN "answer_choices" ON "answer_choices"."question_id" = "questions"."id" LEFT OUTER JOIN "answer_choices" "answer_choices_questions_join" ON "answer_choices_questions_join"."question_id" = "questions"."id" LEFT OUTER JOIN "responses" ON "responses"."answer_choice_id" = "answer_choices_questions_join"."id" GROUP BY answer_choices.text
+DEPRECATION WARNING: It looks like you are eager loading table(s) (one of: answer_choices) that are referenced in a string SQL snippet. For example: 
+
+    Post.includes(:comments).where("comments.title = 'foo'")
+
+Currently, Active Record recognizes the table in the string, and knows to JOIN the comments table to the query, rather than loading comments in a separate query. However, doing this without writing a full-blown SQL parser is inherently flawed. Since we don't want to write an SQL parser, we are removing this functionality. From now on, you must explicitly tell Active Record when you are referencing a table from a string:
+
+    Post.includes(:comments).where("comments.title = 'foo'").references(:comments)
+
+If you don't rely on implicit join references you can disable the feature entirely by setting `config.active_record.disable_implicit_join_references = true`. (called from __pry__ at (pry):3)
+  [1m[36m (4.7ms)[0m  [1mSELECT COUNT(DISTINCT responses.*) AS count_responses_all, answer_choices.text AS answer_choices_text FROM "questions" LEFT OUTER JOIN "answer_choices" ON "answer_choices"."question_id" = "questions"."id" LEFT OUTER JOIN "answer_choices" "answer_choices_questions_join" ON "answer_choices_questions_join"."question_id" = "questions"."id" LEFT OUTER JOIN "responses" ON "responses"."answer_choice_id" = "answer_choices_questions_join"."id" GROUP BY answer_choices.text[0m
+  [1m[35mQuestion Load (0.8ms)[0m  SELECT "questions".* FROM "questions" ORDER BY "questions"."id" ASC LIMIT 1
+  [1m[36mAnswerChoice Load (4.2ms)[0m  [1mSELECT "answer_choices".* FROM "answer_choices" WHERE "answer_choices"."question_id" = $1[0m  [["question_id", 1]]
+  [1m[35m (1.5ms)[0m  SELECT COUNT(DISTINCT responses.*) AS count_responses_all, answer_choices.text AS answer_choices_text FROM "answer_choices" LEFT OUTER JOIN "responses" ON "responses"."answer_choice_id" = "answer_choices"."id" WHERE "answer_choices"."question_id" = $1 GROUP BY answer_choices.text  [["question_id", 1]]
+  [1m[36mQuestion Load (0.6ms)[0m  [1mSELECT "questions".* FROM "questions"[0m
+  [1m[35m (1.1ms)[0m  SELECT COUNT(DISTINCT responses.*) AS count_responses_all, answer_choices.text AS answer_choices_text FROM "answer_choices" LEFT OUTER JOIN "responses" ON "responses"."answer_choice_id" = "answer_choices"."id" WHERE "answer_choices"."question_id" = $1 GROUP BY answer_choices.text  [["question_id", 2]]
+  [1m[36mQuestion Load (0.5ms)[0m  [1mSELECT "questions".* FROM "questions"[0m
+  [1m[35m (1.1ms)[0m  SELECT COUNT(DISTINCT responses.*) AS count_responses_all, answer_choices.text AS answer_choices_text FROM "answer_choices" LEFT OUTER JOIN "responses" ON "responses"."answer_choice_id" = "answer_choices"."id" WHERE "answer_choices"."question_id" = $1 GROUP BY answer_choices.text  [["question_id", 3]]
+  [1m[36mQuestion Load (0.6ms)[0m  [1mSELECT "questions".* FROM "questions"[0m
+  [1m[35mPoll Load (0.7ms)[0m  SELECT "polls".* FROM "polls" ORDER BY "polls"."id" ASC LIMIT 1
+  [1m[36mQuestion Load (1.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."poll_id" = $1[0m  [["poll_id", 1]]
+DEPRECATION WARNING: It looks like you are eager loading table(s) (one of: answer_choices, questions) that are referenced in a string SQL snippet. For example: 
+
+    Post.includes(:comments).where("comments.title = 'foo'")
+
+Currently, Active Record recognizes the table in the string, and knows to JOIN the comments table to the query, rather than loading comments in a separate query. However, doing this without writing a full-blown SQL parser is inherently flawed. Since we don't want to write an SQL parser, we are removing this functionality. From now on, you must explicitly tell Active Record when you are referencing a table from a string:
+
+    Post.includes(:comments).where("comments.title = 'foo'").references(:comments)
+
+If you don't rely on implicit join references you can disable the feature entirely by setting `config.active_record.disable_implicit_join_references = true`. (called from __pry__ at (pry):19)
+DEPRECATION WARNING: It looks like you are eager loading table(s) (one of: answer_choices, questions) that are referenced in a string SQL snippet. For example: 
+
+    Post.includes(:comments).where("comments.title = 'foo'")
+
+Currently, Active Record recognizes the table in the string, and knows to JOIN the comments table to the query, rather than loading comments in a separate query. However, doing this without writing a full-blown SQL parser is inherently flawed. Since we don't want to write an SQL parser, we are removing this functionality. From now on, you must explicitly tell Active Record when you are referencing a table from a string:
+
+    Post.includes(:comments).where("comments.title = 'foo'").references(:comments)
+
+If you don't rely on implicit join references you can disable the feature entirely by setting `config.active_record.disable_implicit_join_references = true`. (called from __pry__ at (pry):20)
+  [1m[35m (2.5ms)[0m  SELECT COUNT(DISTINCT responses.*) AS count_responses_all, answer_choices.text AS answer_choices_text FROM "questions" LEFT OUTER JOIN "answer_choices" ON "answer_choices"."question_id" = "questions"."id" LEFT OUTER JOIN "answer_choices" "answer_choices_questions_join" ON "answer_choices_questions_join"."question_id" = "questions"."id" LEFT OUTER JOIN "responses" ON "responses"."answer_choice_id" = "answer_choices_questions_join"."id" WHERE "questions"."poll_id" = $1 GROUP BY answer_choices.text  [["poll_id", 1]]
+DEPRECATION WARNING: It looks like you are eager loading table(s) (one of: questions, answer_choices) that are referenced in a string SQL snippet. For example: 
+
+    Post.includes(:comments).where("comments.title = 'foo'")
+
+Currently, Active Record recognizes the table in the string, and knows to JOIN the comments table to the query, rather than loading comments in a separate query. However, doing this without writing a full-blown SQL parser is inherently flawed. Since we don't want to write an SQL parser, we are removing this functionality. From now on, you must explicitly tell Active Record when you are referencing a table from a string:
+
+    Post.includes(:comments).where("comments.title = 'foo'").references(:comments)
+
+If you don't rely on implicit join references you can disable the feature entirely by setting `config.active_record.disable_implicit_join_references = true`. (called from __pry__ at (pry):21)
+  [1m[36m (1.8ms)[0m  [1mSELECT COUNT(DISTINCT responses.*) AS count_responses_all, answer_choices.text AS answer_choices_text FROM "questions" LEFT OUTER JOIN "answer_choices" ON "answer_choices"."question_id" = "questions"."id" LEFT OUTER JOIN "answer_choices" "answer_choices_questions_join" ON "answer_choices_questions_join"."question_id" = "questions"."id" LEFT OUTER JOIN "responses" ON "responses"."answer_choice_id" = "answer_choices_questions_join"."id" WHERE "questions"."poll_id" = $1 GROUP BY answer_choices.text[0m  [["poll_id", 1]]
+DEPRECATION WARNING: It looks like you are eager loading table(s) (one of: questions, answer_choices) that are referenced in a string SQL snippet. For example: 
+
+    Post.includes(:comments).where("comments.title = 'foo'")
+
+Currently, Active Record recognizes the table in the string, and knows to JOIN the comments table to the query, rather than loading comments in a separate query. However, doing this without writing a full-blown SQL parser is inherently flawed. Since we don't want to write an SQL parser, we are removing this functionality. From now on, you must explicitly tell Active Record when you are referencing a table from a string:
+
+    Post.includes(:comments).where("comments.title = 'foo'").references(:comments)
+
+If you don't rely on implicit join references you can disable the feature entirely by setting `config.active_record.disable_implicit_join_references = true`. (called from __pry__ at (pry):22)
+  [1m[35m (1.9ms)[0m  SELECT COUNT(DISTINCT responses.*) AS count_responses_all, answer_choices.text AS answer_choices_text FROM "questions" LEFT OUTER JOIN "answer_choices" ON "answer_choices"."question_id" = "questions"."id" LEFT OUTER JOIN "responses" ON "responses"."answer_choice_id" = "answer_choices"."id" WHERE "questions"."poll_id" = $1 GROUP BY answer_choices.text  [["poll_id", 1]]
+DEPRECATION WARNING: It looks like you are eager loading table(s) (one of: questions, answer_choices) that are referenced in a string SQL snippet. For example: 
+
+    Post.includes(:comments).where("comments.title = 'foo'")
+
+Currently, Active Record recognizes the table in the string, and knows to JOIN the comments table to the query, rather than loading comments in a separate query. However, doing this without writing a full-blown SQL parser is inherently flawed. Since we don't want to write an SQL parser, we are removing this functionality. From now on, you must explicitly tell Active Record when you are referencing a table from a string:
+
+    Post.includes(:comments).where("comments.title = 'foo'").references(:comments)
+
+If you don't rely on implicit join references you can disable the feature entirely by setting `config.active_record.disable_implicit_join_references = true`. (called from __pry__ at (pry):23)
+  [1m[36m (1.4ms)[0m  [1mSELECT COUNT(DISTINCT responses.*) AS count_responses_all, answer_choices.text AS answer_choices_text FROM "questions" LEFT OUTER JOIN "answer_choices" ON "answer_choices"."question_id" = "questions"."id" LEFT OUTER JOIN "responses" ON "responses"."answer_choice_id" = "answer_choices"."id" WHERE "questions"."poll_id" = $1 GROUP BY answer_choices.text[0m  [["poll_id", 1]]
+  [1m[35mPoll Load (0.5ms)[0m  SELECT "polls".* FROM "polls" ORDER BY "polls"."id" ASC LIMIT 1
+  [1m[36mPoll Load (0.4ms)[0m  [1mSELECT "polls".* FROM "polls" ORDER BY "polls"."id" ASC LIMIT 1[0m
+DEPRECATION WARNING: It looks like you are eager loading table(s) (one of: questions, answer_choices) that are referenced in a string SQL snippet. For example: 
+
+    Post.includes(:comments).where("comments.title = 'foo'")
+
+Currently, Active Record recognizes the table in the string, and knows to JOIN the comments table to the query, rather than loading comments in a separate query. However, doing this without writing a full-blown SQL parser is inherently flawed. Since we don't want to write an SQL parser, we are removing this functionality. From now on, you must explicitly tell Active Record when you are referencing a table from a string:
+
+    Post.includes(:comments).where("comments.title = 'foo'").references(:comments)
+
+If you don't rely on implicit join references you can disable the feature entirely by setting `config.active_record.disable_implicit_join_references = true`. (called from results at /Users/appacademy/Desktop/Polls/app/models/poll.rb:34)
+  [1m[35m (1.4ms)[0m  SELECT COUNT(DISTINCT responses.*) AS count_responses_all, answer_choices.text AS answer_choices_text FROM "questions" LEFT OUTER JOIN "answer_choices" ON "answer_choices"."question_id" = "questions"."id" LEFT OUTER JOIN "responses" ON "responses"."answer_choice_id" = "answer_choices"."id" WHERE "questions"."poll_id" = $1 GROUP BY answer_choices.text  [["poll_id", 1]]
+  [1m[36mPoll Load (0.8ms)[0m  [1mSELECT "polls".* FROM "polls" ORDER BY "polls"."id" DESC LIMIT 1[0m
+DEPRECATION WARNING: It looks like you are eager loading table(s) (one of: questions, answer_choices) that are referenced in a string SQL snippet. For example: 
+
+    Post.includes(:comments).where("comments.title = 'foo'")
+
+Currently, Active Record recognizes the table in the string, and knows to JOIN the comments table to the query, rather than loading comments in a separate query. However, doing this without writing a full-blown SQL parser is inherently flawed. Since we don't want to write an SQL parser, we are removing this functionality. From now on, you must explicitly tell Active Record when you are referencing a table from a string:
+
+    Post.includes(:comments).where("comments.title = 'foo'").references(:comments)
+
+If you don't rely on implicit join references you can disable the feature entirely by setting `config.active_record.disable_implicit_join_references = true`. (called from results at /Users/appacademy/Desktop/Polls/app/models/poll.rb:34)
+  [1m[35m (1.4ms)[0m  SELECT COUNT(DISTINCT responses.*) AS count_responses_all, answer_choices.text AS answer_choices_text FROM "questions" LEFT OUTER JOIN "answer_choices" ON "answer_choices"."question_id" = "questions"."id" LEFT OUTER JOIN "responses" ON "responses"."answer_choice_id" = "answer_choices"."id" WHERE "questions"."poll_id" = $1 GROUP BY answer_choices.text  [["poll_id", 2]]
+  [1m[36mPoll Load (0.4ms)[0m  [1mSELECT "polls".* FROM "polls" ORDER BY "polls"."id" DESC LIMIT 1[0m
+DEPRECATION WARNING: It looks like you are eager loading table(s) (one of: questions, answer_choices) that are referenced in a string SQL snippet. For example: 
+
+    Post.includes(:comments).where("comments.title = 'foo'")
+
+Currently, Active Record recognizes the table in the string, and knows to JOIN the comments table to the query, rather than loading comments in a separate query. However, doing this without writing a full-blown SQL parser is inherently flawed. Since we don't want to write an SQL parser, we are removing this functionality. From now on, you must explicitly tell Active Record when you are referencing a table from a string:
+
+    Post.includes(:comments).where("comments.title = 'foo'").references(:comments)
+
+If you don't rely on implicit join references you can disable the feature entirely by setting `config.active_record.disable_implicit_join_references = true`. (called from results at /Users/appacademy/Desktop/Polls/app/models/poll.rb:34)
+  [1m[35m (1.6ms)[0m  SELECT COUNT(DISTINCT responses.*) AS count_responses_all, answer_choices.text AS answer_choices_text FROM "questions" LEFT OUTER JOIN "answer_choices" ON "answer_choices"."question_id" = "questions"."id" LEFT OUTER JOIN "responses" ON "responses"."answer_choice_id" = "answer_choices"."id" WHERE "questions"."poll_id" = $1 GROUP BY answer_choices.text  [["poll_id", 2]]
+  [1m[36mPoll Load (0.5ms)[0m  [1mSELECT "polls".* FROM "polls" ORDER BY "polls"."id" DESC LIMIT 1[0m
+DEPRECATION WARNING: It looks like you are eager loading table(s) (one of: questions, answer_choices) that are referenced in a string SQL snippet. For example: 
+
+    Post.includes(:comments).where("comments.title = 'foo'")
+
+Currently, Active Record recognizes the table in the string, and knows to JOIN the comments table to the query, rather than loading comments in a separate query. However, doing this without writing a full-blown SQL parser is inherently flawed. Since we don't want to write an SQL parser, we are removing this functionality. From now on, you must explicitly tell Active Record when you are referencing a table from a string:
+
+    Post.includes(:comments).where("comments.title = 'foo'").references(:comments)
+
+If you don't rely on implicit join references you can disable the feature entirely by setting `config.active_record.disable_implicit_join_references = true`. (called from results at /Users/appacademy/Desktop/Polls/app/models/poll.rb:34)
+  [1m[35m (0.9ms)[0m  SELECT COUNT(DISTINCT responses.*) AS count_responses_all, answer_choices.text AS answer_choices_text FROM "questions" LEFT OUTER JOIN "answer_choices" ON "answer_choices"."question_id" = "questions"."id" LEFT OUTER JOIN "responses" ON "responses"."answer_choice_id" = "answer_choices"."id" WHERE "questions"."poll_id" = $1 GROUP BY answer_choices.text  [["poll_id", 2]]
+  [1m[36mPoll Load (0.5ms)[0m  [1mSELECT "polls".* FROM "polls" ORDER BY "polls"."id" DESC LIMIT 1[0m
+DEPRECATION WARNING: It looks like you are eager loading table(s) (one of: questions, answer_choices) that are referenced in a string SQL snippet. For example: 
+
+    Post.includes(:comments).where("comments.title = 'foo'")
+
+Currently, Active Record recognizes the table in the string, and knows to JOIN the comments table to the query, rather than loading comments in a separate query. However, doing this without writing a full-blown SQL parser is inherently flawed. Since we don't want to write an SQL parser, we are removing this functionality. From now on, you must explicitly tell Active Record when you are referencing a table from a string:
+
+    Post.includes(:comments).where("comments.title = 'foo'").references(:comments)
+
+If you don't rely on implicit join references you can disable the feature entirely by setting `config.active_record.disable_implicit_join_references = true`. (called from results at /Users/appacademy/Desktop/Polls/app/models/poll.rb:34)
+  [1m[35m (0.5ms)[0m  SELECT COUNT(DISTINCT responses.*) AS count_responses_all, answer_choices.text AS answer_choices_text FROM "questions" LEFT OUTER JOIN "answer_choices" ON "answer_choices"."question_id" = "questions"."id" LEFT OUTER JOIN "responses" ON "responses"."answer_choice_id" = "answer_choices"."id" WHERE "questions"."poll_id" = $1 GROUP BY answer_choices.text  [["poll_id", 2]]
+  [1m[36mPoll Load (0.6ms)[0m  [1mSELECT "polls".* FROM "polls" ORDER BY "polls"."id" DESC LIMIT 1[0m
+DEPRECATION WARNING: It looks like you are eager loading table(s) (one of: questions, answer_choices) that are referenced in a string SQL snippet. For example: 
+
+    Post.includes(:comments).where("comments.title = 'foo'")
+
+Currently, Active Record recognizes the table in the string, and knows to JOIN the comments table to the query, rather than loading comments in a separate query. However, doing this without writing a full-blown SQL parser is inherently flawed. Since we don't want to write an SQL parser, we are removing this functionality. From now on, you must explicitly tell Active Record when you are referencing a table from a string:
+
+    Post.includes(:comments).where("comments.title = 'foo'").references(:comments)
+
+If you don't rely on implicit join references you can disable the feature entirely by setting `config.active_record.disable_implicit_join_references = true`. (called from __pry__ at (pry):43)
+  [1m[35m (0.5ms)[0m  SELECT COUNT(DISTINCT responses.*) AS count_responses_all, answer_choices.text AS answer_choices_text FROM "questions" LEFT OUTER JOIN "answer_choices" ON "answer_choices"."question_id" = "questions"."id" LEFT OUTER JOIN "responses" ON "responses"."answer_choice_id" = "answer_choices"."id" WHERE "questions"."poll_id" = $1 GROUP BY answer_choices.text  [["poll_id", 2]]
+  [1m[36mPoll Load (0.7ms)[0m  [1mSELECT "polls".* FROM "polls" ORDER BY "polls"."id" DESC LIMIT 1[0m
+  [1m[35m (0.7ms)[0m  SELECT COUNT(DISTINCT responses.*) AS count_responses_all, answer_choices.text AS answer_choices_text FROM "questions" LEFT OUTER JOIN "answer_choices" ON "answer_choices"."question_id" = "questions"."id" LEFT OUTER JOIN "responses" ON "responses"."answer_choice_id" = "answer_choices"."id" WHERE "questions"."poll_id" = $1 GROUP BY answer_choices.text  [["poll_id", 2]]
+  [1m[36mPoll Load (0.7ms)[0m  [1mSELECT "polls".* FROM "polls" ORDER BY "polls"."id" DESC LIMIT 1[0m
+  [1m[35m (0.6ms)[0m  SELECT COUNT(DISTINCT responses.*) AS count_responses_all, answer_choices.text AS answer_choices_text FROM "questions" LEFT OUTER JOIN "answer_choices" ON "answer_choices"."question_id" = "questions"."id" LEFT OUTER JOIN "responses" ON "responses"."answer_choice_id" = "answer_choices"."id" WHERE "questions"."poll_id" = $1 GROUP BY answer_choices.text  [["poll_id", 2]]
+  [1m[36mPoll Load (0.8ms)[0m  [1mSELECT "polls".* FROM "polls" ORDER BY "polls"."id" DESC LIMIT 1[0m
+  [1m[35mSQL (0.8ms)[0m  SELECT "questions"."id" AS t0_r0, "questions"."poll_id" AS t0_r1, "questions"."text" AS t0_r2, "questions"."created_at" AS t0_r3, "questions"."updated_at" AS t0_r4, "responses"."id" AS t1_r0, "responses"."user_id" AS t1_r1, "responses"."answer_choice_id" AS t1_r2, "responses"."created_at" AS t1_r3, "responses"."updated_at" AS t1_r4 FROM "questions" LEFT OUTER JOIN "answer_choices" ON "answer_choices"."question_id" = "questions"."id" LEFT OUTER JOIN "responses" ON "responses"."answer_choice_id" = "answer_choices"."id" WHERE "questions"."poll_id" = $1 GROUP BY answer_choices.text  [["poll_id", 2]]
+PG::GroupingError: ERROR:  column "questions.id" must appear in the GROUP BY clause or be used in an aggregate function
+LINE 1: SELECT "questions"."id" AS t0_r0, "questions"."poll_id" AS t...
+               ^
+: SELECT "questions"."id" AS t0_r0, "questions"."poll_id" AS t0_r1, "questions"."text" AS t0_r2, "questions"."created_at" AS t0_r3, "questions"."updated_at" AS t0_r4, "responses"."id" AS t1_r0, "responses"."user_id" AS t1_r1, "responses"."answer_choice_id" AS t1_r2, "responses"."created_at" AS t1_r3, "responses"."updated_at" AS t1_r4 FROM "questions" LEFT OUTER JOIN "answer_choices" ON "answer_choices"."question_id" = "questions"."id" LEFT OUTER JOIN "responses" ON "responses"."answer_choice_id" = "answer_choices"."id" WHERE "questions"."poll_id" = $1 GROUP BY answer_choices.text
+  [1m[36mPoll Load (0.7ms)[0m  [1mSELECT "polls".* FROM "polls" ORDER BY "polls"."id" DESC LIMIT 1[0m
+DEPRECATION WARNING: Relation#all is deprecated. If you want to eager-load a relation, you can call #load (e.g. `Post.where(published: true).load`). If you want to get an array of records from a relation, you can call #to_a (e.g. `Post.where(published: true).to_a`). (called from __pry__ at (pry):47)
+  [1m[35mSQL (0.7ms)[0m  SELECT "questions"."id" AS t0_r0, "questions"."poll_id" AS t0_r1, "questions"."text" AS t0_r2, "questions"."created_at" AS t0_r3, "questions"."updated_at" AS t0_r4, "responses"."id" AS t1_r0, "responses"."user_id" AS t1_r1, "responses"."answer_choice_id" AS t1_r2, "responses"."created_at" AS t1_r3, "responses"."updated_at" AS t1_r4 FROM "questions" LEFT OUTER JOIN "answer_choices" ON "answer_choices"."question_id" = "questions"."id" LEFT OUTER JOIN "responses" ON "responses"."answer_choice_id" = "answer_choices"."id" WHERE "questions"."poll_id" = $1 GROUP BY answer_choices.text  [["poll_id", 2]]
+PG::GroupingError: ERROR:  column "questions.id" must appear in the GROUP BY clause or be used in an aggregate function
+LINE 1: SELECT "questions"."id" AS t0_r0, "questions"."poll_id" AS t...
+               ^
+: SELECT "questions"."id" AS t0_r0, "questions"."poll_id" AS t0_r1, "questions"."text" AS t0_r2, "questions"."created_at" AS t0_r3, "questions"."updated_at" AS t0_r4, "responses"."id" AS t1_r0, "responses"."user_id" AS t1_r1, "responses"."answer_choice_id" AS t1_r2, "responses"."created_at" AS t1_r3, "responses"."updated_at" AS t1_r4 FROM "questions" LEFT OUTER JOIN "answer_choices" ON "answer_choices"."question_id" = "questions"."id" LEFT OUTER JOIN "responses" ON "responses"."answer_choice_id" = "answer_choices"."id" WHERE "questions"."poll_id" = $1 GROUP BY answer_choices.text
+  [1m[36mPoll Load (0.5ms)[0m  [1mSELECT "polls".* FROM "polls" ORDER BY "polls"."id" DESC LIMIT 1[0m
+  [1m[35m (0.5ms)[0m  SELECT COUNT(DISTINCT responses.*) AS count_responses_all, answer_choices.text AS answer_choices_text FROM "questions" LEFT OUTER JOIN "answer_choices" ON "answer_choices"."question_id" = "questions"."id" LEFT OUTER JOIN "responses" ON "responses"."answer_choice_id" = "answer_choices"."id" WHERE "questions"."poll_id" = $1 GROUP BY answer_choices.text  [["poll_id", 2]]
+  [1m[36mPoll Load (0.7ms)[0m  [1mSELECT "polls".* FROM "polls" ORDER BY "polls"."id" ASC LIMIT 1[0m
+  [1m[35m (0.5ms)[0m  SELECT COUNT(DISTINCT responses.*) AS count_responses_all, answer_choices.text AS answer_choices_text FROM "questions" LEFT OUTER JOIN "answer_choices" ON "answer_choices"."question_id" = "questions"."id" LEFT OUTER JOIN "responses" ON "responses"."answer_choice_id" = "answer_choices"."id" WHERE "questions"."poll_id" = $1 GROUP BY answer_choices.text  [["poll_id", 1]]
+  [1m[36mQuestion Load (0.5ms)[0m  [1mSELECT "questions".* FROM "questions"[0m
+  [1m[35mResponse Load (0.5ms)[0m  SELECT "responses".* FROM "responses"
+  [1m[36mAnswerChoice Load (0.7ms)[0m  [1mSELECT "answer_choices".* FROM "answer_choices"[0m
+  [1m[35mPoll Load (0.7ms)[0m  SELECT "polls".* FROM "polls" ORDER BY "polls"."id" ASC LIMIT 1
+  [1m[36m (1.8ms)[0m  [1mSELECT COUNT(responses.*) AS count_responses_all, answer_choices.text AS answer_choices_text FROM "questions" INNER JOIN "answer_choices" ON "answer_choices"."question_id" = "questions"."id" INNER JOIN "responses" ON "responses"."answer_choice_id" = "answer_choices"."id" WHERE "questions"."poll_id" = $1 GROUP BY answer_choices.text[0m  [["poll_id", 1]]
+  [1m[35mPoll Load (0.6ms)[0m  SELECT "polls".* FROM "polls" ORDER BY "polls"."id" DESC LIMIT 1
+  [1m[36mPoll Load (0.7ms)[0m  [1mSELECT "polls".* FROM "polls" ORDER BY "polls"."id" DESC LIMIT 1[0m
+  [1m[35m (1.2ms)[0m  SELECT COUNT(responses.*) AS count_responses_all, answer_choices.text AS answer_choices_text FROM "questions" INNER JOIN "answer_choices" ON "answer_choices"."question_id" = "questions"."id" INNER JOIN "responses" ON "responses"."answer_choice_id" = "answer_choices"."id" WHERE "questions"."poll_id" = $1 GROUP BY answer_choices.text  [["poll_id", 2]]
+  [1m[36mPoll Load (0.7ms)[0m  [1mSELECT "polls".* FROM "polls" ORDER BY "polls"."id" ASC LIMIT 1[0m
+  [1m[35m (1.3ms)[0m  SELECT COUNT(responses.*) AS count_responses_all, answer_choices.text AS answer_choices_text FROM "questions" INNER JOIN "answer_choices" ON "answer_choices"."question_id" = "questions"."id" INNER JOIN "responses" ON "responses"."answer_choice_id" = "answer_choices"."id" WHERE "questions"."poll_id" = $1 GROUP BY answer_choices.text  [["poll_id", 1]]
+  [1m[36mPoll Load (0.8ms)[0m  [1mSELECT "polls".* FROM "polls" ORDER BY "polls"."id" ASC LIMIT 1[0m
+  [1m[35m (0.8ms)[0m  SELECT COUNT(DISTINCT responses.*) AS count_responses_all, answer_choices.text AS answer_choices_text FROM "questions" LEFT OUTER JOIN "answer_choices" ON "answer_choices"."question_id" = "questions"."id" LEFT OUTER JOIN "responses" ON "responses"."answer_choice_id" = "answer_choices"."id" WHERE "questions"."poll_id" = $1 GROUP BY answer_choices.text  [["poll_id", 1]]
+  [1m[36mPoll Load (0.4ms)[0m  [1mSELECT "polls".* FROM "polls" ORDER BY "polls"."id" DESC LIMIT 1[0m
+  [1m[35m (0.7ms)[0m  SELECT COUNT(DISTINCT responses.*) AS count_responses_all, answer_choices.text AS answer_choices_text FROM "questions" LEFT OUTER JOIN "answer_choices" ON "answer_choices"."question_id" = "questions"."id" LEFT OUTER JOIN "responses" ON "responses"."answer_choice_id" = "answer_choices"."id" WHERE "questions"."poll_id" = $1 GROUP BY answer_choices.text  [["poll_id", 2]]
+  [1m[36mPoll Load (0.6ms)[0m  [1mSELECT "polls".* FROM "polls" ORDER BY "polls"."id" ASC LIMIT 1[0m
+  [1m[35m (1.1ms)[0m  SELECT COUNT(DISTINCT responses.*) AS count_responses_all, answer_choices.text AS answer_choices_text FROM "questions" LEFT OUTER JOIN "answer_choices" ON "answer_choices"."question_id" = "questions"."id" LEFT OUTER JOIN "responses" ON "responses"."answer_choice_id" = "answer_choices"."id" WHERE "questions"."poll_id" = $1 GROUP BY answer_choices.text  [["poll_id", 1]]
+  [1m[36mPoll Load (0.6ms)[0m  [1mSELECT "polls".* FROM "polls" ORDER BY "polls"."id" DESC LIMIT 1[0m
+  [1m[35m (0.9ms)[0m  SELECT COUNT(DISTINCT responses.*) AS count_responses_all, answer_choices.text AS answer_choices_text FROM "questions" LEFT OUTER JOIN "answer_choices" ON "answer_choices"."question_id" = "questions"."id" LEFT OUTER JOIN "responses" ON "responses"."answer_choice_id" = "answer_choices"."id" WHERE "questions"."poll_id" = $1 GROUP BY answer_choices.text  [["poll_id", 2]]
+  [1m[36mPoll Load (0.7ms)[0m  [1mSELECT "polls".* FROM "polls" ORDER BY "polls"."id" DESC LIMIT 1[0m
+  [1m[35mQuestion Load (0.6ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."poll_id" = $1  [["poll_id", 2]]
+  [1m[36mUser Load (1.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mResponse Load (0.7ms)[0m  SELECT "responses".* FROM "responses" WHERE "responses"."user_id" = $1  [["user_id", 2]]
+  [1m[36mResponse Load (0.7ms)[0m  [1mSELECT "responses".* FROM "responses" WHERE "responses"."user_id" = $1[0m  [["user_id", 2]]
+  [1m[35mResponse Load (1.0ms)[0m  SELECT "responses".* FROM "responses" WHERE "responses"."user_id" = $1 ORDER BY "responses"."id" ASC LIMIT 1  [["user_id", 2]]
+  [1m[36mResponse Load (0.8ms)[0m  [1mSELECT "responses".* FROM "responses" WHERE "responses"."user_id" = $1 ORDER BY "responses"."id" ASC LIMIT 1[0m  [["user_id", 2]]
+  [1m[35mAnswerChoice Load (0.4ms)[0m  SELECT "answer_choices".* FROM "answer_choices" WHERE "answer_choices"."id" IN (2)
+DEPRECATION WARNING: Relation#all is deprecated. If you want to eager-load a relation, you can call #load (e.g. `Post.where(published: true).load`). If you want to get an array of records from a relation, you can call #to_a (e.g. `Post.where(published: true).to_a`). (called from __pry__ at (pry):68)
+  [1m[36mResponse Load (0.7ms)[0m  [1mSELECT "responses".* FROM "responses" WHERE "responses"."user_id" = $1[0m  [["user_id", 2]]
+  [1m[35mAnswerChoice Load (0.6ms)[0m  SELECT "answer_choices".* FROM "answer_choices" WHERE "answer_choices"."id" IN (2, 6)
+DEPRECATION WARNING: Relation#all is deprecated. If you want to eager-load a relation, you can call #load (e.g. `Post.where(published: true).load`). If you want to get an array of records from a relation, you can call #to_a (e.g. `Post.where(published: true).to_a`). (called from __pry__ at (pry):69)
+DEPRECATION WARNING: It looks like you are eager loading table(s) (one of: answer_choice, responses) that are referenced in a string SQL snippet. For example: 
+
+    Post.includes(:comments).where("comments.title = 'foo'")
+
+Currently, Active Record recognizes the table in the string, and knows to JOIN the comments table to the query, rather than loading comments in a separate query. However, doing this without writing a full-blown SQL parser is inherently flawed. Since we don't want to write an SQL parser, we are removing this functionality. From now on, you must explicitly tell Active Record when you are referencing a table from a string:
+
+    Post.includes(:comments).where("comments.title = 'foo'").references(:comments)
+
+If you don't rely on implicit join references you can disable the feature entirely by setting `config.active_record.disable_implicit_join_references = true`. (called from __pry__ at (pry):69)
+  [1m[36mSQL (1.1ms)[0m  [1mSELECT "responses"."id" AS t0_r0, "responses"."user_id" AS t0_r1, "responses"."answer_choice_id" AS t0_r2, "responses"."created_at" AS t0_r3, "responses"."updated_at" AS t0_r4, "answer_choices"."id" AS t1_r0, "answer_choices"."question_id" AS t1_r1, "answer_choices"."text" AS t1_r2, "answer_choices"."created_at" AS t1_r3, "answer_choices"."updated_at" AS t1_r4, answer_choice.text FROM "responses" LEFT OUTER JOIN "answer_choices" ON "answer_choices"."id" = "responses"."answer_choice_id" WHERE "responses"."user_id" = $1[0m  [["user_id", 2]]
+PG::UndefinedTable: ERROR:  missing FROM-clause entry for table "answer_choice"
+LINE 1: ...AS t1_r3, "answer_choices"."updated_at" AS t1_r4, answer_cho...
+                                                             ^
+: SELECT "responses"."id" AS t0_r0, "responses"."user_id" AS t0_r1, "responses"."answer_choice_id" AS t0_r2, "responses"."created_at" AS t0_r3, "responses"."updated_at" AS t0_r4, "answer_choices"."id" AS t1_r0, "answer_choices"."question_id" AS t1_r1, "answer_choices"."text" AS t1_r2, "answer_choices"."created_at" AS t1_r3, "answer_choices"."updated_at" AS t1_r4, answer_choice.text FROM "responses" LEFT OUTER JOIN "answer_choices" ON "answer_choices"."id" = "responses"."answer_choice_id" WHERE "responses"."user_id" = $1
+DEPRECATION WARNING: Relation#all is deprecated. If you want to eager-load a relation, you can call #load (e.g. `Post.where(published: true).load`). If you want to get an array of records from a relation, you can call #to_a (e.g. `Post.where(published: true).to_a`). (called from __pry__ at (pry):70)
+DEPRECATION WARNING: It looks like you are eager loading table(s) (one of: answer_choice, responses) that are referenced in a string SQL snippet. For example: 
+
+    Post.includes(:comments).where("comments.title = 'foo'")
+
+Currently, Active Record recognizes the table in the string, and knows to JOIN the comments table to the query, rather than loading comments in a separate query. However, doing this without writing a full-blown SQL parser is inherently flawed. Since we don't want to write an SQL parser, we are removing this functionality. From now on, you must explicitly tell Active Record when you are referencing a table from a string:
+
+    Post.includes(:comments).where("comments.title = 'foo'").references(:comments)
+
+If you don't rely on implicit join references you can disable the feature entirely by setting `config.active_record.disable_implicit_join_references = true`. (called from __pry__ at (pry):70)
+  [1m[35mSQL (0.7ms)[0m  SELECT "responses"."id" AS t0_r0, "responses"."user_id" AS t0_r1, "responses"."answer_choice_id" AS t0_r2, "responses"."created_at" AS t0_r3, "responses"."updated_at" AS t0_r4, "answer_choices"."id" AS t1_r0, "answer_choices"."question_id" AS t1_r1, "answer_choices"."text" AS t1_r2, "answer_choices"."created_at" AS t1_r3, "answer_choices"."updated_at" AS t1_r4, answer_choice.text FROM "responses" LEFT OUTER JOIN "answer_choices" ON "answer_choices"."id" = "responses"."answer_choice_id" WHERE "responses"."user_id" = $1 AND (user_id = 2)  [["user_id", 2]]
+PG::UndefinedTable: ERROR:  missing FROM-clause entry for table "answer_choice"
+LINE 1: ...AS t1_r3, "answer_choices"."updated_at" AS t1_r4, answer_cho...
+                                                             ^
+: SELECT "responses"."id" AS t0_r0, "responses"."user_id" AS t0_r1, "responses"."answer_choice_id" AS t0_r2, "responses"."created_at" AS t0_r3, "responses"."updated_at" AS t0_r4, "answer_choices"."id" AS t1_r0, "answer_choices"."question_id" AS t1_r1, "answer_choices"."text" AS t1_r2, "answer_choices"."created_at" AS t1_r3, "answer_choices"."updated_at" AS t1_r4, answer_choice.text FROM "responses" LEFT OUTER JOIN "answer_choices" ON "answer_choices"."id" = "responses"."answer_choice_id" WHERE "responses"."user_id" = $1 AND (user_id = 2)
+DEPRECATION WARNING: Relation#all is deprecated. If you want to eager-load a relation, you can call #load (e.g. `Post.where(published: true).load`). If you want to get an array of records from a relation, you can call #to_a (e.g. `Post.where(published: true).to_a`). (called from __pry__ at (pry):71)
+DEPRECATION WARNING: It looks like you are eager loading table(s) (one of: answer_choices, responses) that are referenced in a string SQL snippet. For example: 
+
+    Post.includes(:comments).where("comments.title = 'foo'")
+
+Currently, Active Record recognizes the table in the string, and knows to JOIN the comments table to the query, rather than loading comments in a separate query. However, doing this without writing a full-blown SQL parser is inherently flawed. Since we don't want to write an SQL parser, we are removing this functionality. From now on, you must explicitly tell Active Record when you are referencing a table from a string:
+
+    Post.includes(:comments).where("comments.title = 'foo'").references(:comments)
+
+If you don't rely on implicit join references you can disable the feature entirely by setting `config.active_record.disable_implicit_join_references = true`. (called from __pry__ at (pry):71)
+  [1m[36mSQL (1.4ms)[0m  [1mSELECT "responses"."id" AS t0_r0, "responses"."user_id" AS t0_r1, "responses"."answer_choice_id" AS t0_r2, "responses"."created_at" AS t0_r3, "responses"."updated_at" AS t0_r4, "answer_choices"."id" AS t1_r0, "answer_choices"."question_id" AS t1_r1, "answer_choices"."text" AS t1_r2, "answer_choices"."created_at" AS t1_r3, "answer_choices"."updated_at" AS t1_r4, answer_choices.text FROM "responses" LEFT OUTER JOIN "answer_choices" ON "answer_choices"."id" = "responses"."answer_choice_id" WHERE "responses"."user_id" = $1 AND (user_id = 2)[0m  [["user_id", 2]]
+DEPRECATION WARNING: Relation#all is deprecated. If you want to eager-load a relation, you can call #load (e.g. `Post.where(published: true).load`). If you want to get an array of records from a relation, you can call #to_a (e.g. `Post.where(published: true).to_a`). (called from __pry__ at (pry):72)
+DEPRECATION WARNING: It looks like you are eager loading table(s) (one of: answer_choices, responses) that are referenced in a string SQL snippet. For example: 
+
+    Post.includes(:comments).where("comments.title = 'foo'")
+
+Currently, Active Record recognizes the table in the string, and knows to JOIN the comments table to the query, rather than loading comments in a separate query. However, doing this without writing a full-blown SQL parser is inherently flawed. Since we don't want to write an SQL parser, we are removing this functionality. From now on, you must explicitly tell Active Record when you are referencing a table from a string:
+
+    Post.includes(:comments).where("comments.title = 'foo'").references(:comments)
+
+If you don't rely on implicit join references you can disable the feature entirely by setting `config.active_record.disable_implicit_join_references = true`. (called from __pry__ at (pry):72)
+  [1m[35mSQL (1.5ms)[0m  SELECT "responses"."id" AS t0_r0, "responses"."user_id" AS t0_r1, "responses"."answer_choice_id" AS t0_r2, "responses"."created_at" AS t0_r3, "responses"."updated_at" AS t0_r4, "answer_choices"."id" AS t1_r0, "answer_choices"."question_id" AS t1_r1, "answer_choices"."text" AS t1_r2, "answer_choices"."created_at" AS t1_r3, "answer_choices"."updated_at" AS t1_r4, answer_choices.text FROM "responses" LEFT OUTER JOIN "answer_choices" ON "answer_choices"."id" = "responses"."answer_choice_id" WHERE "responses"."user_id" = $1  [["user_id", 2]]
+DEPRECATION WARNING: Relation#all is deprecated. If you want to eager-load a relation, you can call #load (e.g. `Post.where(published: true).load`). If you want to get an array of records from a relation, you can call #to_a (e.g. `Post.where(published: true).to_a`). (called from __pry__ at (pry):73)
+DEPRECATION WARNING: It looks like you are eager loading table(s) (one of: poll, responses) that are referenced in a string SQL snippet. For example: 
+
+    Post.includes(:comments).where("comments.title = 'foo'")
+
+Currently, Active Record recognizes the table in the string, and knows to JOIN the comments table to the query, rather than loading comments in a separate query. However, doing this without writing a full-blown SQL parser is inherently flawed. Since we don't want to write an SQL parser, we are removing this functionality. From now on, you must explicitly tell Active Record when you are referencing a table from a string:
+
+    Post.includes(:comments).where("comments.title = 'foo'").references(:comments)
+
+If you don't rely on implicit join references you can disable the feature entirely by setting `config.active_record.disable_implicit_join_references = true`. (called from __pry__ at (pry):73)
+DEPRECATION WARNING: Relation#all is deprecated. If you want to eager-load a relation, you can call #load (e.g. `Post.where(published: true).load`). If you want to get an array of records from a relation, you can call #to_a (e.g. `Post.where(published: true).to_a`). (called from __pry__ at (pry):74)
+DEPRECATION WARNING: It looks like you are eager loading table(s) (one of: poll, responses) that are referenced in a string SQL snippet. For example: 
+
+    Post.includes(:comments).where("comments.title = 'foo'")
+
+Currently, Active Record recognizes the table in the string, and knows to JOIN the comments table to the query, rather than loading comments in a separate query. However, doing this without writing a full-blown SQL parser is inherently flawed. Since we don't want to write an SQL parser, we are removing this functionality. From now on, you must explicitly tell Active Record when you are referencing a table from a string:
+
+    Post.includes(:comments).where("comments.title = 'foo'").references(:comments)
+
+If you don't rely on implicit join references you can disable the feature entirely by setting `config.active_record.disable_implicit_join_references = true`. (called from __pry__ at (pry):74)
+DEPRECATION WARNING: Relation#all is deprecated. If you want to eager-load a relation, you can call #load (e.g. `Post.where(published: true).load`). If you want to get an array of records from a relation, you can call #to_a (e.g. `Post.where(published: true).to_a`). (called from __pry__ at (pry):76)
+DEPRECATION WARNING: It looks like you are eager loading table(s) (one of: poll, responses) that are referenced in a string SQL snippet. For example: 
+
+    Post.includes(:comments).where("comments.title = 'foo'")
+
+Currently, Active Record recognizes the table in the string, and knows to JOIN the comments table to the query, rather than loading comments in a separate query. However, doing this without writing a full-blown SQL parser is inherently flawed. Since we don't want to write an SQL parser, we are removing this functionality. From now on, you must explicitly tell Active Record when you are referencing a table from a string:
+
+    Post.includes(:comments).where("comments.title = 'foo'").references(:comments)
+
+If you don't rely on implicit join references you can disable the feature entirely by setting `config.active_record.disable_implicit_join_references = true`. (called from __pry__ at (pry):76)
+DEPRECATION WARNING: Relation#all is deprecated. If you want to eager-load a relation, you can call #load (e.g. `Post.where(published: true).load`). If you want to get an array of records from a relation, you can call #to_a (e.g. `Post.where(published: true).to_a`). (called from __pry__ at (pry):78)
+DEPRECATION WARNING: It looks like you are eager loading table(s) (one of: poll, responses) that are referenced in a string SQL snippet. For example: 
+
+    Post.includes(:comments).where("comments.title = 'foo'")
+
+Currently, Active Record recognizes the table in the string, and knows to JOIN the comments table to the query, rather than loading comments in a separate query. However, doing this without writing a full-blown SQL parser is inherently flawed. Since we don't want to write an SQL parser, we are removing this functionality. From now on, you must explicitly tell Active Record when you are referencing a table from a string:
+
+    Post.includes(:comments).where("comments.title = 'foo'").references(:comments)
+
+If you don't rely on implicit join references you can disable the feature entirely by setting `config.active_record.disable_implicit_join_references = true`. (called from __pry__ at (pry):78)
+DEPRECATION WARNING: Relation#all is deprecated. If you want to eager-load a relation, you can call #load (e.g. `Post.where(published: true).load`). If you want to get an array of records from a relation, you can call #to_a (e.g. `Post.where(published: true).to_a`). (called from __pry__ at (pry):79)
+DEPRECATION WARNING: Relation#all is deprecated. If you want to eager-load a relation, you can call #load (e.g. `Post.where(published: true).load`). If you want to get an array of records from a relation, you can call #to_a (e.g. `Post.where(published: true).to_a`). (called from __pry__ at (pry):80)
+  [1m[36mResponse Load (0.4ms)[0m  [1mSELECT "responses".* FROM "responses" ORDER BY "responses"."id" ASC LIMIT 1[0m
+  [1m[35mResponse Load (0.7ms)[0m  SELECT "responses".* FROM "responses" ORDER BY "responses"."id" ASC LIMIT 1
+  [1m[36mResponse Load (0.8ms)[0m  [1mSELECT "responses".* FROM "responses" INNER JOIN "answer_choices" ON "answer_choices"."id" = "responses"."answer_choice_id"[0m
+  [1m[35mResponse Load (0.7ms)[0m  SELECT "responses".* FROM "responses"
+  [1m[36mAnswerChoice Load (0.3ms)[0m  [1mSELECT "answer_choices".* FROM "answer_choices" WHERE "answer_choices"."id" IN (7, 2, 6)[0m
+  [1m[35mResponse Load (0.7ms)[0m  SELECT "responses".* FROM "responses" WHERE (user_id = 1)
+  [1m[36mAnswerChoice Load (0.5ms)[0m  [1mSELECT "answer_choices".* FROM "answer_choices" WHERE "answer_choices"."id" IN (7)[0m
+  [1m[35mResponse Load (0.6ms)[0m  SELECT "responses".* FROM "responses" WHERE (user_id = 2)
+  [1m[36mAnswerChoice Load (0.4ms)[0m  [1mSELECT "answer_choices".* FROM "answer_choices" WHERE "answer_choices"."id" IN (2, 6)[0m
+  [1m[35mResponse Load (0.7ms)[0m  SELECT "responses".* FROM "responses" WHERE (user_id = 2)
+  [1m[36mAnswerChoice Load (0.6ms)[0m  [1mSELECT "answer_choices".* FROM "answer_choices" WHERE "answer_choices"."id" IN (2, 6)[0m
+  [1m[35mResponse Load (0.8ms)[0m  SELECT "responses".* FROM "responses" WHERE (user_id = 2)
+  [1m[36mAnswerChoice Load (0.6ms)[0m  [1mSELECT "answer_choices".* FROM "answer_choices" WHERE "answer_choices"."id" IN (2, 6)[0m
+  [1m[35mResponse Load (0.8ms)[0m  SELECT "responses".* FROM "responses" WHERE (user_id = 2) ORDER BY "responses"."id" ASC LIMIT 1
+  [1m[36mAnswerChoice Load (0.5ms)[0m  [1mSELECT "answer_choices".* FROM "answer_choices" WHERE "answer_choices"."id" IN (2)[0m
+  [1m[35mResponse Load (0.4ms)[0m  SELECT "responses".* FROM "responses" ORDER BY "responses"."id" ASC LIMIT 1
+  [1m[36mResponse Load (0.5ms)[0m  [1mSELECT "responses".* FROM "responses" ORDER BY "responses"."id" ASC LIMIT 1[0m
+  [1m[35mQuestion Load (1.1ms)[0m  SELECT "questions".* FROM "questions" INNER JOIN "answer_choices" ON "questions"."id" = "answer_choices"."question_id" WHERE "answer_choices"."id" = $1 ORDER BY "questions"."id" ASC LIMIT 1  [["id", 7]]
+  [1m[36mResponse Load (0.7ms)[0m  [1mSELECT "responses".* FROM "responses" ORDER BY "responses"."id" ASC LIMIT 1[0m
+  [1m[35mQuestion Load (1.0ms)[0m  SELECT "questions".* FROM "questions" INNER JOIN "answer_choices" ON "questions"."id" = "answer_choices"."question_id" WHERE "answer_choices"."id" = $1 ORDER BY "questions"."id" ASC LIMIT 1  [["id", 7]]
+  [1m[36mResponse Load (0.6ms)[0m  [1mSELECT "responses".* FROM "responses" ORDER BY "responses"."id" ASC LIMIT 1[0m
+  [1m[35mQuestion Load (1.0ms)[0m  SELECT "questions".* FROM "questions" INNER JOIN "answer_choices" ON "questions"."id" = "answer_choices"."question_id" WHERE "answer_choices"."id" = $1 ORDER BY "questions"."id" ASC LIMIT 1  [["id", 7]]
+  [1m[36mPoll Load (0.7ms)[0m  [1mSELECT "polls".* FROM "polls" ORDER BY "polls"."id" ASC LIMIT 1[0m
+  [1m[35mUser Load (0.7ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]

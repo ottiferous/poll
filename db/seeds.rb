@@ -33,11 +33,8 @@ choice6 = AnswerChoice.create!(:question_id => question3.id, :text => "I walk")
 choice7 = AnswerChoice.create!(:question_id => question3.id, :text => "I take the bus")
 choice8 = AnswerChoice.create!(:question_id => question3.id, :text => "I endure the bart")
 
-reply = Response.create!(:user_id => user.id, :answer_choice_id => choice1.id)
-reply2 = Response.create!(:user_id => user.id, :answer_choice_id => choice3.id)
+reply = Response.create!(:user_id => user.id, :answer_choice_id => choice6.id)
 
 reply3 = Response.create!(:user_id => user2.id, :answer_choice_id => choice1.id)
 reply4 = Response.create!(:user_id => user2.id, :answer_choice_id => choice5.id)
 
-reply5 = Response.create!(:user_id => user3.id, :answer_choice_id => choice.id)
-reply6 = Response.create!(:user_id => user3.id, :answer_choice_id => choice4.id)

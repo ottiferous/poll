@@ -25,4 +25,13 @@ class Poll < ActiveRecord::Base
             :foreign_key => :poll_id,
             :primary_key => :id
 
+
+  has_many  :question_answers,
+            :through => :questions,
+            :source => :answer_choices
+
+  def results
+    questions.includes(:my_responses).group('answer_choices.text').references(:my_responses).count("responses.*")
+  end
+
 end
