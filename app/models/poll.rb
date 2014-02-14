@@ -23,7 +23,8 @@ class Poll < ActiveRecord::Base
   has_many  :questions,
             :class_name => 'Question',
             :foreign_key => :poll_id,
-            :primary_key => :id
+            :primary_key => :id,
+            dependent: :destroy
 
 
   has_many  :question_answers,
